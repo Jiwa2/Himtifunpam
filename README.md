@@ -1,2 +1,3 @@
 # Himtifunpam
-Website HIMTIF Unpam yang dikelola oleh Department Riset dan Teknologi. menampilkan informasi HITMIF dan memiliki fitur galeri, daftar department, list proker dan polling pemira yang diperuntukan untuk keperluan internal HIMTIF
+Website resmi Himpunan Mahasiswa (HIMA) [Nama Prodi] yang menyediakan informasi organisasi serta sistem voting online untuk pemilihan Ketua dan Wakil Ketua HIMA.
+Fitur : Galeri Proker, Department HIMTIF, Pengenalan anggota dan pengurus Department, Sistem voting online.
