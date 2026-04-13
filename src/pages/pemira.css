@@ -1,0 +1,197 @@
+.pemira-wrapper {
+  min-height: 100vh;
+  background: #e6c79c;
+  padding: 40px 20px;
+}
+
+.pemira-container {
+  max-width: 1100px;
+  margin: auto;
+  background: #e2bc8c;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* NAVBAR (NYATU DALAM CARD) */
+.pemira-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.logo-img {
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.burger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.burger:focus,
+.burger:active {
+  outline: none;
+  background: transparent;
+}
+
+.pemira-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pemira-desc {
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.paslon {
+  margin-bottom: 60px;
+}
+
+.paslon-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.paslon-title.right {
+  text-align: right;
+}
+
+.paslon-content {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.paslon-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.paslon-foto {
+  display: flex;
+  gap: 15px;
+}
+
+.card-foto {
+  width: 120px;
+  height: 150px;
+  background: #ccc;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card-foto:hover {
+  transform: translateY(-5px);
+}
+
+.card-foto span {
+  font-size: 12px;
+}
+
+.visi-misi {
+  flex: 1;
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+.box h4 {
+  margin-bottom: 5px;
+}
+
+.box-content {
+  background: linear-gradient(to bottom, #d3a376, #c69360);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.cta p {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background: #b88a5a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: #D3A376;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .paslon-content {
+    flex-direction: column;
+  }
+
+  .paslon-content.reverse {
+    flex-direction: column;
+  }
+
+  .paslon-title.right {
+    text-align: left;
+  }
+}
