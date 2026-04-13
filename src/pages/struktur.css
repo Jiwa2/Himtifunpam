@@ -5,7 +5,7 @@
 
 .navbar {
   background: #D3A376;
-  padding: 10px 30px;
+  padding: 10px 20px;
 }
 
 .navbar-inner {
@@ -27,40 +27,56 @@
 }
 
 .container {
-  padding: 50px 20px;
+  padding: 40px 15px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
-  gap: 50px; /* 🔥 jarak antar section */
+  gap: 60px; 
 }
 
 .judul {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.grid-bph {
+.bph-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.bph-top {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+}
+
+.bph-bottom {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  column-gap: 20px;
-  row-gap: 30px; /* 🔥 jarak ke bawah */
+  grid-template-columns: repeat(4, 140px);
+  justify-content: center;
+  gap: 60px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  column-gap: 20px;
-  row-gap: 30px; /* 🔥 ini yang bikin ga nempel */
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 140px));
+  justify-content: center;
+  justify-items: center;
+  gap: 50px 50px;
+
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card-struktur {
+  width: 140px;
   background: #d3a376;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 10px; 
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  transition: 0.3s;
+  transition: all 0.25s ease;
 }
 
 .card-struktur:hover {
@@ -71,22 +87,23 @@
   width: 75px;
   height: 75px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 10px;
 }
 
 .card-struktur h4 {
   font-size: 13px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .card-struktur p {
   font-size: 11px;
   background: #c69360;
-  padding: 4px;
-  border-radius: 4px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
+/* SIDEBAR */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
@@ -122,13 +139,55 @@
 }
 
 @media (max-width: 900px) {
-  .grid-bph {
-    grid-template-columns: repeat(3, 1fr);
+  .bph-bottom {
+    grid-template-columns: repeat(2, 140px);
+    gap: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 
+/* MOBILE */
 @media (max-width: 600px) {
-  .grid-bph {
+
+  .container {
+    padding: 30px 10px;
+    gap: 50px;
+  }
+
+  .bph-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bph-bottom {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .card-struktur {
+    width: 100%;
+    max-width: 130px;
+    padding: 12px;
+  }
+
+  .foto {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-struktur h4 {
+    font-size: 12px;
+  }
+
+  .card-struktur p {
+    font-size: 10px;
   }
 }
