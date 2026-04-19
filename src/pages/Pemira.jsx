@@ -119,14 +119,10 @@ export default function Pemira() {
             “Gunakan hak pilihmu dan ikut berpartisipasi dalam Pemira.”
           </p>
 
-          <a
-            href="https://forms.gle/ISI_LINK_KAMU"
-            target="_blank"
-            rel="noreferrer"
-            className="cta-btn"
-          >
-            Tentukan Pilihanmu Sekarang!
-          </a>
+          <Link to="/Formpemira" 
+          className="cta-btn">
+          Tentukan Pilihanmu Sekarang!
+          </Link>
         </div>
 
       </div>
