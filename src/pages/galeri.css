@@ -1,0 +1,182 @@
+.galeri-container {
+    padding: 60px 40px;
+    background-color: #FDE2BA; /* Light peach background from design */
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.galeri-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.galeri-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.galeri-header p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    color: #333;
+}
+
+.galeri-filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+
+.filter-label {
+    font-weight: 600;
+    background-color: #D4A373;
+    padding: 6px 18px;
+    border-radius: 20px;
+    color: #111;
+    font-size: 0.95rem;
+}
+
+.filter-btn {
+    background-color: #D4A373;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    color: #111;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    background-color: #C08D5D;
+}
+
+.filter-btn.active {
+    background-color: #B27B49;
+    color: #fff;
+}
+
+.filter-btn:active {
+    transform: scale(0.95);
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.galeri-card {
+    background: #D4A373;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.galeri-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Make it a square */
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeri-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeri-card:hover .galeri-image-container img {
+    transform: scale(1.05);
+}
+
+.galeri-placeholder {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.galeri-card-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #111;
+}
+
+.galeri-card-content li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.galeri-card-content li:last-child {
+    margin-bottom: 0;
+}
+
+.galeri-card-content li strong {
+    font-weight: 800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .galeri-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .galeri-filters {
+        justify-content: center;
+    }
+    .galeri-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeri-grid {
+        grid-template-columns: 1fr;
+    }
+    .galeri-container {
+        padding: 40px 20px;
+    }
+    .galeri-header h2 {
+        font-size: 1.3rem;
+    }
+    .galeri-header p {
+        font-size: 1rem;
+    }
+}
