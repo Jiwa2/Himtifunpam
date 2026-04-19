@@ -260,3 +260,93 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
 }
+
+/* RESET BIAR GA ADA GAP ANEH */
+body {
+  margin: 0;
+}
+
+.footer {
+  background-color: #d9b38c;
+  width: 100%;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* KIRI */
+.footer-left {
+  text-align: left;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-icons img {
+  width: 22px;
+  height: 22px;
+}
+
+/* TENGAH */
+.footer-center {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* KANAN */
+.footer-right {
+  text-align: right;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right li {
+  margin-bottom: 6px;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  background-color: #c79a6b;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}

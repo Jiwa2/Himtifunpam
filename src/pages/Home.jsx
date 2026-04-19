@@ -129,9 +129,51 @@ Membangun citra HIMTIF yang produktif dan kolaboratif melalui optimalisasi media
       </div>
     </section>
 
-      <footer className="footer">
-        © {new Date().getFullYear()} HIMTIF Universitas Pamulang
-      </footer>
+<footer className="footer">
+  <div className="footer-container">
+
+    {/* KIRI */}
+    <div className="footer-left">
+      <div className="footer-logo">
+        <img src="/images/logohimtif.png" alt="logo" />
+        <div>
+          <h3>Himpunan Teknik Informatika</h3>
+          <p><i>Universitas Pamulang</i></p>
+        </div>
+      </div>
+
+      <div className="footer-icons">
+        <img src="/images/tiktok.avif" alt="tiktok" />
+        <img src="/images/instagram.png" alt="instagram" />
+        <img src="/images/email.png" alt="email" />
+        <img src="/images/youtube.png" alt="youtube" />
+      </div>
+    </div>
+
+    {/* TENGAH */}
+    <div className="footer-center">
+      <p>
+        Jl. Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan,
+        Banten 15310
+      </p>
+    </div>
+
+    {/* KANAN */}
+    <div className="footer-right">
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Himtif</a></li>
+        <li><a href="#filosofi">Kontak Kami</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div className="footer-bottom">
+    © 2026 HIMTIF UNPAM - Ristek Division
+  </div>
+</footer>
 
     </div>
   );
