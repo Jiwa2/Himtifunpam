@@ -1,6 +1,6 @@
 .galeri-container {
-    padding: 60px 40px;
-    background-color: #FDE2BA; /* Light peach background from design */
+    padding: 80px 40px 60px 40px;
+    background-color: #FDE2BA;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
 }
@@ -97,7 +97,8 @@
 
 .galeri-image-container {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Make it a square */
+    aspect-ratio: 1 / 1;
+    /* Make it a square */
     background-color: #D9D9D9;
     border-radius: 8px;
     overflow: hidden;
@@ -146,7 +147,6 @@
     font-weight: 800;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
     .galeri-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -158,9 +158,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .galeri-filters {
         justify-content: center;
     }
+
     .galeri-header h2 {
         font-size: 1.5rem;
     }
@@ -170,13 +172,100 @@
     .galeri-grid {
         grid-template-columns: 1fr;
     }
+
     .galeri-container {
         padding: 40px 20px;
     }
+
     .galeri-header h2 {
         font-size: 1.3rem;
     }
+
     .galeri-header p {
         font-size: 1rem;
     }
+}
+
+/* GALERI FOOTER */
+.footer.galeri-footer {
+    color: #333;
+}
+
+.galeri-footer .footer-right-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.galeri-footer .footer-right h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.galeri-footer .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.galeri-footer .footer-right li {
+    margin-bottom: 8px;
+}
+
+.galeri-footer .footer-right li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.galeri-footer .footer-right li a:hover {
+    text-decoration: underline;
+}
+
+.galeri-footer .footer-center p {
+    color: #333;
+    line-height: 1.5;
+}
+
+/* KIRI */
+.galeri-footer .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.galeri-footer .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.galeri-footer .footer-logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.galeri-footer .footer-brand-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    font-style: italic;
+}
+
+.galeri-footer .footer-univ {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    color: #333;
+    text-align: left;
+}
+
+.footer.galeri-footer .footer-bottom {
+    text-align: center;
+    color: #444;
 }
