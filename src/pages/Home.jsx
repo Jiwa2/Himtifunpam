@@ -132,7 +132,6 @@ Membangun citra HIMTIF yang produktif dan kolaboratif melalui optimalisasi media
 <footer className="footer">
   <div className="footer-container">
 
-    {/* KIRI */}
     <div className="footer-left">
       <div className="footer-logo">
         <img src="/images/logohimtif.png" alt="logo" />
@@ -150,7 +149,6 @@ Membangun citra HIMTIF yang produktif dan kolaboratif melalui optimalisasi media
       </div>
     </div>
 
-    {/* TENGAH */}
     <div className="footer-center">
       <p>
         Jl. Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan,
