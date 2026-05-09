@@ -50,7 +50,7 @@ export default function Struktur() {
 
         <h2 className="judul">KEPENGURUSAN</h2>
 
-        <h3 className="subjudul">Department Ristek</h3>
+        <h3 className="subjudul">Department Riset dan Teknologi</h3>
         <div className="grid">
           <Card nama="Muhammad Jiwa Islamutidar" jabatan="Kepala Department Ristek" foto="/images/ristek/Muhammad Jiwa Islamutidar.png" />
           <Card nama="Ahmad Renaldy" jabatan="Sekretaris Department" foto="/images/ristek/Ahmad Renaldy.png" />
@@ -69,7 +69,7 @@ export default function Struktur() {
           <Card nama="Paris Nurfadhillah" jabatan="Staff" foto="/images/humas/PARIS NURFADHILLAH.png" />
         </div>
 
-        <h3 className="subjudul">Department Minfo</h3>
+        <h3 className="subjudul">Department Media informasi</h3>
         <div className="grid">
           <Card nama="Bagas Anwar Meiqadr" jabatan="Kepala Department Minfo" foto="/images/minfo/BAGAS ANWAR MEIQADR.png" />
           <Card nama="Lidya Septia Nita Darmawati" jabatan="Sekretaris Department" foto="/images/minfo/LIDYA SEPTIA NITA DARMAWATI.png" />
@@ -79,7 +79,7 @@ export default function Struktur() {
           <Card nama="Suci Oktaviani" jabatan="Staff" foto="/images/minfo/SUCI OKTAVIANI.png" />
         </div>
 
-        <h3 className="subjudul">Department Sosbud</h3>
+        <h3 className="subjudul">Department Sosial Budaya</h3>
         <div className="grid">
           <Card nama="Farid Mardan Aziz" jabatan="Kepala Department Sosbud" foto="/images/sosbud/Farid Mardan Aziz.png" />
           <Card nama="Aldi Athalla Putra" jabatan="Sekretaris Department" foto="/images/sosbud/Aldi Athalla Putra.png" />
@@ -90,7 +90,7 @@ export default function Struktur() {
           <Card nama="Arinta Salsabilla" jabatan="Staff" foto="/images/sosbud/Arinta Salsabilla.png" />
         </div>
 
-        <h3 className="subjudul">Department PSDM</h3>
+        <h3 className="subjudul">Department Pengembangan Sumber Daya Manusia</h3>
         <div className="grid">
           <Card nama="Rifky Ramadhan" jabatan="Kepala Department PSDM" foto="/images/PSDM/Rifky Ramadhan Putra Permana.png" />
           <Card nama="Bilqis Nilam Cahya" jabatan="Sekretaris Department" foto="/images/PSDM/Bilqis Nilam Cahya.png" />
@@ -98,6 +98,54 @@ export default function Struktur() {
           <Card nama="Bening Fajriatul Hawa" jabatan="Staff" foto="/images/PSDM/Bening Fajriatul Hawa.png" />
         </div>
 
+      <h2 className="judul">ANGGOTA</h2>
+        <h3 className="subjudul">Anggota Riset dan Teknologi</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
+
+        <h3 className="subjudul">Anggota HUMAS</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
+
+        <h3 className="subjudul">Anggota HUMAS</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
+
+        <h3 className="subjudul">Anggota Media Informasi</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
+      
+              <h3 className="subjudul">Anggota Sosial Budaya</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
+
+        <h3 className="subjudul">Anggota Pengembangan Sumber Daya Manusia</h3>
+        <div className="grid">
+          <Card nama="..." jabatan="Kepala Department PSDM" foto="/images/.png" />
+          <Card nama="..." jabatan="Sekretaris Department" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+          <Card nama="..." jabatan="Staff" foto="/images/.png" />
+        </div>
       </div>
     </div>
   );

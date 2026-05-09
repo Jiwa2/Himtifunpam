@@ -8,43 +8,43 @@ export default function Galeri() {
 
   const dataKegiatan = [
     {
-      nama: "Makrab HIMTIF",
+      nama: "Bukber HIMTIF",
+      departemen: "Sosbud",
+      tanggal: " Maret 2026",
+      deskripsi: "Buka bersama anggota dan pengurus HIMTIF di bulan suci Ramadhan.",
+      gambar: ""
+    },
+    {
+      nama: "Himtif Berbagi",
+      departemen: "Sosbud",
+      tanggal: " Maret 2026",
+      deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
+      gambar: ""
+    },
+    {
+      nama: "Makrab",
       departemen: "PSDA",
-      tanggal: "01 Januari 2025",
-      deskripsi: "Kegiatan pengenalan anggota baru yang bertujuan untuk mempererat tali persaudaraan.",
+      tanggal: " 2025",
+      deskripsi: "Malam keakraban.",
       gambar: ""
     },
     {
-      nama: "Seminar IT Nasional",
-      departemen: "Ristek",
-      tanggal: "02 Februari 2025",
-      deskripsi: "Seminar tentang perkembangan teknologi AI dan dampaknya pada industri masa depan.",
-      gambar: ""
-    },
-    {
-      nama: "Lomba UI/UX",
-      departemen: "Ristek",
-      tanggal: "03 Maret 2025",
-      deskripsi: "Kompetisi desain antarmuka aplikasi tingkat universitas se-Indonesia.",
-      gambar: ""
-    },
-    {
-      nama: "Kunjungan Industri",
-      departemen: "Humas",
+      nama: "Podcast",
+      departemen: "Minfo",
       tanggal: "04 April 2025",
       deskripsi: "Kunjungan mahasiswa ke berbagai perusahaan teknologi ternama di Jakarta.",
       gambar: ""
     },
     {
-      nama: "Bakti Sosial",
-      departemen: "Sosbud",
+      nama: "Rudistif",
+      departemen: "Humas",
       tanggal: "05 Mei 2025",
       deskripsi: "Kegiatan penggalangan dana dan pemberian bantuan untuk panti asuhan setempat.",
       gambar: ""
     },
     {
-      nama: "Pelatihan Desain",
-      departemen: "Minfo",
+      nama: "Hackaton",
+      departemen: "Ristek",
       tanggal: "06 Juni 2025",
       deskripsi: "Workshop pembuatan desain poster dan konten media sosial yang menarik.",
       gambar: ""
