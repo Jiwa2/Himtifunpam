@@ -3,6 +3,7 @@
   background: #e6c79c;
 }
 
+/* NAVBAR */
 .navbar {
   background: #D3A376;
   padding: 10px 20px;
@@ -26,26 +27,39 @@
   cursor: pointer;
 }
 
+/* CONTAINER */
 .container {
   padding: 40px 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 60px; 
+  gap: 60px;
 }
 
 .judul {
   font-weight: bold;
   letter-spacing: 1px;
+  font-size: 28px;
 }
 
+.subjudul {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =========================
+   BADAN PENGURUS HARIAN
+========================= */
 .bph-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  grid-template-columns: repeat(4, 140px);
+  justify-content: center;
+  gap: 55px;
   max-width: 900px;
   margin: 0 auto;
-  justify-items: center;
 }
 
 .bph-grid > :nth-child(1) {
@@ -72,21 +86,55 @@
   grid-column: 4;
 }
 
+/* =========================
+   KEPENGURUSAN
+========================= */
+
+.pengurus-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.pengurus-row {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 55px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+/* khusus PSDM 4 card sejajar */
+.pengurus-row.psdm {
+  flex-wrap: nowrap;
+  gap: 50px; 
+}
+
+/* =========================
+   ANGGOTA
+========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 140px));
   justify-content: center;
   justify-items: center;
-  gap: 50px 50px;
-  max-width: 900px;
+  gap: 45px;
+  max-width: 1000px;
   margin: 0 auto;
 }
+
+/* =========================
+   CARD
+========================= */
 
 .card-struktur {
   width: 140px;
   background: #d3a376;
   padding: 15px;
-  border-radius: 10px; 
+  border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   transition: all 0.25s ease;
 }
@@ -95,17 +143,20 @@
   transform: translateY(-6px);
 }
 
+/* FOTO FIX PROPORSI */
 .foto {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  object-position: center top;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .card-struktur h4 {
   font-size: 13px;
   margin-bottom: 6px;
+  min-height: 32px;
 }
 
 .card-struktur p {
@@ -114,6 +165,10 @@
   padding: 5px;
   border-radius: 5px;
 }
+
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar-overlay {
   position: fixed;
@@ -149,13 +204,23 @@
   cursor: pointer;
 }
 
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 900px) {
+
   .bph-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
   }
 
   .bph-grid > * {
     grid-column: auto;
+  }
+
+  .pengurus-row.psdm {
+    flex-wrap: wrap;
   }
 
   .grid {
@@ -163,10 +228,37 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
+
   .container {
     padding: 30px 10px;
-    gap: 50px;
+    gap: 45px;
+  }
+
+  .judul {
+    font-size: 24px;
+  }
+
+  .subjudul {
+    font-size: 18px;
+  }
+
+  .bph-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .pengurus-row {
+    gap: 20px; 
+    padding: 0;
+  }
+
+  .pengurus-row.psdm {
+    gap: 20px;
   }
 
   .grid {
@@ -181,8 +273,8 @@
   }
 
   .foto {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
   }
 
   .card-struktur h4 {
@@ -192,24 +284,4 @@
   .card-struktur p {
     font-size: 10px;
   }
-}
-
-.subjudul {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-
-  .bph-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
 }
