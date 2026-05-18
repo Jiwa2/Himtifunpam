@@ -22,10 +22,17 @@ export default function Galeri() {
       gambar: ""
     },
     {
-      nama: "Makrab",
+      nama: "Salam HIMTIF",
+      departemen: "Humas",
+      tanggal: " Maret 2026",
+      deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
+      gambar: ""
+    },
+    {
+      nama: "HIMTIF Ajar",
       departemen: "PSDA",
-      tanggal: " 2025",
-      deskripsi: "Malam keakraban.",
+      tanggal: " Maret 2026",
+      deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
       gambar: ""
     },
     {
@@ -33,6 +40,27 @@ export default function Galeri() {
       departemen: "Minfo",
       tanggal: "04 April 2025",
       deskripsi: "Kunjungan mahasiswa ke berbagai perusahaan teknologi ternama di Jakarta.",
+      gambar: ""
+    },
+    {
+      nama: "Makrab",
+      departemen: "PSDA",
+      tanggal: " 2025",
+      deskripsi: "Malam keakraban.",
+      gambar: ""
+    },
+    {
+      nama: "Collab HIMTIFxHiMAPTI",
+      departemen: "Ristek",
+      tanggal: " 2025",
+      deskripsi: "Malam keakraban.",
+      gambar: ""
+    },
+    {
+      nama: "HIMTIF Asri (Aktif Bersinergi",
+      departemen: "PSDA",
+      tanggal: " 2025",
+      deskripsi: ".",
       gambar: ""
     },
     {
@@ -49,48 +77,6 @@ export default function Galeri() {
       deskripsi: "Workshop pembuatan desain poster dan konten media sosial yang menarik.",
       gambar: ""
     },
-    {
-      nama: "Malam Keakraban",
-      departemen: "PSDA",
-      tanggal: "07 Juli 2025",
-      deskripsi: "Acara tahunan untuk menyambut dan mengakrabkan mahasiswa baru teknik informatika.",
-      gambar: ""
-    },
-    {
-      nama: "HIMTIF Mengajar",
-      departemen: "Sosbud",
-      tanggal: "08 Agustus 2025",
-      deskripsi: "Program pengabdian masyarakat dengan mengajarkan dasar komputer di sekolah dasar.",
-      gambar: ""
-    },
-    {
-      nama: "Studi Banding",
-      departemen: "Humas",
-      tanggal: "09 September 2025",
-      deskripsi: "Kegiatan studi banding dengan himpunan mahasiswa dari universitas lain.",
-      gambar: ""
-    },
-    {
-      nama: "Podcast IT Series",
-      departemen: "Minfo",
-      tanggal: "10 Oktober 2025",
-      deskripsi: "Sesi diskusi interaktif seputar dunia perkuliahan IT dan prospek karir ke depan.",
-      gambar: ""
-    },
-    {
-      nama: "Workshop Web Dev",
-      departemen: "Ristek",
-      tanggal: "11 November 2025",
-      deskripsi: "Pelatihan komprehensif pembuatan website dari dasar hingga tingkat mahir.",
-      gambar: ""
-    },
-    {
-      nama: "Upgrading Pengurus",
-      departemen: "PSDA",
-      tanggal: "12 Desember 2025",
-      deskripsi: "Kegiatan peningkatan kapasitas kepemimpinan dan soft skill pengurus himpunan.",
-      gambar: ""
-    }
   ];
 
   const categories = ["Semua", "Ristek", "Humas", "Sosbud", "Minfo", "PSDA"];
