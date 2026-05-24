@@ -1,56 +1,47 @@
-.pemira-wrapper {
+.formpemira-wrapper {
   min-height: 100vh;
   background: #e6c79c;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* NAVBAR */
-.pemira-navbar {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 20px auto;
+.formpemira-container {
+  max-width: 1100px;
+  margin: auto;
+}
 
+.formpemira-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo-img {
-  height: 45px;
+  height: 40px;
   object-fit: contain;
   display: block;
 }
 
-/* BURGER */
 .burger {
   font-size: 28px;
-  background: transparent;
+  background: none;
   border: none;
-  color: black;
+  color: #5c4633; 
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .burger:hover {
   transform: scale(1.1);
 }
 
-.burger:focus,
-.burger:active {
-  outline: none;
-  background: transparent;
-}
-
-/* SIDEBAR */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 999;
-
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
   display: flex;
   justify-content: flex-end;
 }
@@ -59,57 +50,36 @@
   width: 260px;
   height: 100%;
   background: #D3A376;
-
   display: flex;
   flex-direction: column;
+  padding: 20px;
   gap: 20px;
-
-  padding: 25px;
-
-  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .sidebar a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: 0.2s;
-}
-
-.sidebar a:hover {
-  transform: translateX(5px);
 }
 
 .close {
   align-self: flex-end;
-
   background: none;
   border: none;
-
-  font-size: 24px;
+  font-size: 22px;
   color: white;
-
   cursor: pointer;
 }
 
-/* CARD */
-.pemira-card {
+.formpemira-card {
   width: 100%;
-  max-width: 900px;
-
-  margin: auto;
-
-  background: linear-gradient(#e6c79c, #d3a376);
-
+  background: #e2bc8c;
   padding: 35px;
-
   border-radius: 12px;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* HEADER */
-.pemira-header {
+.formpemira-header {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -121,7 +91,6 @@
   object-fit: contain;
 }
 
-/* TITLE */
 .title {
   text-align: center;
   font-size: 42px;
@@ -135,7 +104,6 @@
   margin-bottom: 40px;
 }
 
-/* FORM */
 .form {
   display: flex;
   flex-direction: column;
@@ -157,20 +125,16 @@
   padding: 16px;
   border-radius: 30px;
   border: none;
-
   background: #c69360;
   color: white;
-
   outline: none;
-
   font-size: 15px;
 }
 
 .input-group input::placeholder {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.7);
 }
 
-/* PILIHAN */
 .pilihan-title {
   margin-top: 20px;
   font-size: 32px;
@@ -179,24 +143,19 @@
 
 .paslon-container {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .paslon-card {
-  width: 280px;
-
+  width: 320px;
   border: 2px solid #5c4633;
   border-radius: 12px;
-
-  padding: 18px;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
+  padding: 20px;
   background: rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .paslon-card:hover {
@@ -205,52 +164,43 @@
 
 .paslon-header {
   text-align: center;
-  margin-bottom: 15px;
-  font-weight: bold;
   font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
-.paslon-content {
+.paslon-form-content {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  gap: 15px;
 }
 
 .calon {
+  flex: 1;
   background: #c69360;
   padding: 12px;
   border-radius: 8px;
   text-align: center;
-  flex: 1;
-}
-
-.calon p {
-  margin-top: 8px;
 }
 
 .foto {
   width: 100%;
-  height: 100px;
+  height: 120px;
   object-fit: cover;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 
-/* BUTTON */
 .submit-btn {
   margin-top: 30px;
-
   padding: 15px;
-
   background: #a87b54;
   color: white;
-
   border: none;
   border-radius: 30px;
-
   cursor: pointer;
-
   font-size: 16px;
   font-weight: bold;
-
   transition: 0.3s;
 }
 
@@ -259,10 +209,8 @@
   transform: scale(1.02);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .pemira-card {
+  .formpemira-card {
     padding: 22px;
   }
 
@@ -274,12 +222,12 @@
     font-size: 24px;
   }
 
-  .paslon-content {
-    flex-direction: column;
-  }
-
   .paslon-card {
     width: 100%;
+  }
+
+  .paslon-form-content {
+    flex-direction: column;
   }
 
   .sidebar {

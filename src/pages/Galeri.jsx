@@ -10,28 +10,28 @@ export default function Galeri() {
     {
       nama: "Bukber HIMTIF",
       departemen: "Sosbud",
-      tanggal: " Maret 2026",
+      tanggal: "Maret 2026",
       deskripsi: "Buka bersama anggota dan pengurus HIMTIF di bulan suci Ramadhan.",
       gambar: ""
     },
     {
       nama: "Himtif Berbagi",
       departemen: "Sosbud",
-      tanggal: " Maret 2026",
+      tanggal: "Maret 2026",
       deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
       gambar: ""
     },
     {
       nama: "Salam HIMTIF",
       departemen: "Humas",
-      tanggal: " Maret 2026",
+      tanggal: "Maret 2026",
       deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
       gambar: ""
     },
     {
       nama: "HIMTIF Ajar",
       departemen: "PSDA",
-      tanggal: " Maret 2026",
+      tanggal: "Maret 2026",
       deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
       gambar: ""
     },
@@ -45,21 +45,21 @@ export default function Galeri() {
     {
       nama: "Makrab",
       departemen: "PSDA",
-      tanggal: " 2025",
+      tanggal: "2025",
       deskripsi: "Malam keakraban.",
       gambar: ""
     },
     {
       nama: "Collab HIMTIFxHiMAPTI",
       departemen: "Ristek",
-      tanggal: " 2025",
+      tanggal: "2025",
       deskripsi: "Malam keakraban.",
       gambar: ""
     },
     {
-      nama: "HIMTIF Asri (Aktif Bersinergi",
+      nama: "HIMTIF Asri (Aktif Bersinergi)",
       departemen: "PSDA",
-      tanggal: " 2025",
+      tanggal: "2025",
       deskripsi: ".",
       gambar: ""
     },
@@ -155,16 +155,12 @@ export default function Galeri() {
 
       <footer className="footer galeri-footer">
         <div className="footer-container">
-
-          {/* KIRI */}
           <div className="footer-left">
             <div className="footer-brand">
               <img src="/images/logohimtif.png" alt="logo" className="footer-logo-img" />
               <h3 className="footer-brand-title">Himpunan Teknik<br />Informatika</h3>
             </div>
-
             <p className="footer-univ"><i>Universitas Pamulang</i></p>
-
             <div className="footer-icons">
               <img src="/images/tiktok.avif" alt="tiktok" />
               <img src="/images/instagram.png" alt="instagram" />
@@ -173,7 +169,6 @@ export default function Galeri() {
             </div>
           </div>
 
-          {/* TENGAH */}
           <div className="footer-center">
             <p>
               Jl. Puspitek, Buaran, Kec. Pamulang, Kota<br />
@@ -181,7 +176,6 @@ export default function Galeri() {
             </p>
           </div>
 
-          {/* KANAN */}
           <div className="footer-right">
             <div className="footer-right-content">
               <h3><i>Navigasi</i></h3>
@@ -192,7 +186,6 @@ export default function Galeri() {
               </ul>
             </div>
           </div>
-
         </div>
 
         <div className="footer-bottom">
