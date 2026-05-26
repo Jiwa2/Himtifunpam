@@ -131,69 +131,66 @@ export default function Struktur() {
         {/* ANGGOTA RISTEK */}
         <h3 className="subjudul">Anggota Riset dan Teknologi</h3>
         <div className="grid">
-          <Card nama="Afzal Putra Hariyudha" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ahmad Layyinul Labib" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Danu Ngesti Prasetyo" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Farel Adya Ridhafa" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ibnu Syuhada Suffera" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Haninda Coni Olivia" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ibrahim Surya Kusuma" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Michelle Aniela Wijaya" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ni'matul Jannah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rahmat Syafa Firdaus" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rifqi Atha Ramadhan" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rizky Revaldo" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rizqi Komarullail" jabatan="Anggota" foto="/images/default.png" />
+          <Card nama="Afzal Putra Hariyudha" jabatan="Anggota" foto="/images/anggotaristek/Afzal Putra Hariyudha.jpg" />
+          <Card nama="Ahmad Layyinul Labib" jabatan="Anggota" foto="/images/anggotaristek/Ahmad Layyinul Labib.jpg" />
+          <Card nama="Danu Ngesti Prasetyo" jabatan="Anggota" foto="/images/anggotaristek/Danu Ngesti Prasetyo_.jpg" />
+          <Card nama="Farel Adya Ridhafa" jabatan="Anggota" foto="/images/anggotaristek/Farel Adya Ridhafa.jpg" />
+          <Card nama="Ibnu Syuhada Suffera" jabatan="Anggota" foto="/images/anggotaristek/Ibnu Syuhada.png" />
+          <Card nama="Haninda Coni Olivia" jabatan="Anggota" foto="/images/anggotaristek/Haninda Coni Olivia.jpg" />
+          <Card nama="Ibrahim Surya Kusuma" jabatan="Anggota" foto="/images/anggotaristek/Ibrahim Surya Kusuma.png" />
+          <Card nama="Michelle Aniela Wijaya" jabatan="Anggota" foto="/images/anggotaristek/Michelle Aniela Wijaya.jpg" />
+          <Card nama="Ni'matul Jannah" jabatan="Anggota" foto="/images/anggotaristek/Ni_ma Tuljannah.jpeg" />
+          <Card nama="Rahmat Syafa Firdaus" jabatan="Anggota" foto="/images/anggotaristek/" />
+          <Card nama="Rifqi Atha Ramadhan" jabatan="Anggota" foto="/images/anggotaristek/Rifqi Atha Ramadhan_.jpg" />
+          <Card nama="Rizky Revaldo" jabatan="Anggota" foto="/images/anggotaristek/Rizky Revaldo.jpg" />
+          <Card nama="Rizky Komarullail" jabatan="Anggota" foto="/images/anggotaristek/Rizky Komarullail.jpg" />
         </div>
 
         {/* ANGGOTA HUMAS */}
         <h3 className="subjudul">Anggota Hubungan Masyarakat</h3>
         <div className="grid">
-          <Card nama="Angel Ajeng Gita Pertiwi" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Dimas Faiz Afzal" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ilham Jaya" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Laras Ayu Setyorini" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Lingga Arditama" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Mochammad Ridwan Prasetyo" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Muhamad Perdiansyah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rifki Dimas Panuju" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Sela Nabila" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Zaid Naufan" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Zaydan Afif Fadhillah" jabatan="Anggota" foto="/images/default.png" />
+          <Card nama="Angel Ajeng Gita Pertiwi" jabatan="Anggota" foto="/images/humas/Angel Ajeng Gita Pertiwi.png" />
+          <Card nama="Dimas Faiz Afzal" jabatan="Anggota" foto="/images/humas/Dimas Faiz Afzal.jpg" />
+          <Card nama="Ilham Jaya" jabatan="Anggota" foto="/images/humas/---" />
+          <Card nama="Laras Ayu Setyorini" jabatan="Anggota" foto="/images/humas/Laras Ayu Setyorini.jpg" />
+          <Card nama="Lingga Arditama" jabatan="Anggota" foto="/images/humas/---" />
+          <Card nama="Mochammad Ridwan Prasetyo" jabatan="Anggota" foto="/images/humas/Mochammad Ridwan Prasetyo.jpg" />
+          <Card nama="Muhamad Perdiansyah" jabatan="Anggota" foto="/images/humas/Muhammad Perdiansyah.jpg" />
+          <Card nama="Rifki Dimas Panuju" jabatan="Anggota" foto="/images/humas/Rifki Dimas Panuju.jpg" />
+          <Card nama="Sela Nabila" jabatan="Anggota" foto="/images/humas/Sela Nabila.jpg" />
+          <Card nama="Zaid Naufan" jabatan="Anggota" foto="/images/humas/zaid naufan.jpeg" />
+          <Card nama="Zaydan Afif Fadhillah" jabatan="Anggota" foto="/images/humas/Zaydan Afif Fadhillah.jpg" />
         </div>
 
-        {/* ANGGOTA MEDIA */}
         <h3 className="subjudul">Anggota Media Informasi</h3>
         <div className="grid">
-          <Card nama="Aisyah Rahmatussolehah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Akhmad Syahrul Fauzan" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Andini Nur Agustina Basuki" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Anggela Merici Moruk" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Fairus Priyogi" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Haura Rana Hafizhah Ramadhani" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Khairunnisa Syafitri" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Putra Wijaya" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Salsabillah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Syaufa Rajani Laela Suminda" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Wahyu Ahmad Padillah" jabatan="Anggota" foto="/images/default.png" />
+          <Card nama="Aisyah Rahmatussolehah" jabatan="Anggota" foto="/images/anggotaminfo/Aisyah Rahmatussolehah.jpg" />
+          <Card nama="Akhmad Syahrul Fauzan" jabatan="Anggota" foto="/images/anggotaminfo/Akhmad Syahrul Fauzan.jpg" />
+          <Card nama="Andini Nur Agustina Basuki" jabatan="Anggota" foto="/images/anggotaminfo/Andini Nur Agustina Basuki.jpg" />
+          <Card nama="Anggela Merici Moruk" jabatan="Anggota" foto="/images/anggotaminfo/Anggela Merici Moruk.jpg" />
+          <Card nama="Fairus Priyogi" jabatan="Anggota" foto="/images/anggotaminfo/Fairus Priyogi-251011400516.jpg" />
+          <Card nama="Haura Rana Hafizhah Ramadhani" jabatan="Anggota" foto="/images/anggotaminfo/Haura Rana Hafizhah Ramadhani.jpg" />
+          <Card nama="Khairunnisa Syafitri" jabatan="Anggota" foto="/images/anggotaminfo/Khairunnisa Syafitri.png" />
+          <Card nama="Putra Wijaya" jabatan="Anggota" foto="/images/anggotaminfo/Putra Wijaya -2510400637.jpg" />
+          <Card nama="Salsabillah" jabatan="Anggota" foto="/images/anggotaminfo/Salsabillah_241011402651.png" />
+          <Card nama="Syaufa Rajani Laela Suminda" jabatan="Anggota" foto="/images/anggotaminfo/Syaufa Rajani Laela Suminda.JPG" />
+          <Card nama="Wahyu Ahmad Padillah" jabatan="Anggota" foto="/images/anggotaminfo/Wahyu Ahmad Padillah.png" />
         </div>
 
-        {/* ANGGOTA SOSBUD */}
         <h3 className="subjudul">Anggota Sosial Budaya</h3>
         <div className="grid">
-          <Card nama="Andrea Nova Fitriani" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Aurellia Dian Hanifah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Dani Taufikurrohman" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="David Charles Duval" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Dini Yusriah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Hikbal Maulana" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Ibnu Salam Yakin" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Juliana Moza" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rakha Mazaya Haeru" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Rianto Nababan" jabatan="Anggota" foto="/images/default.png" />
+          <Card nama="Andrea Nova Fitriani" jabatan="Anggota" foto="/images/anggotasosbud/Andrea Nova Fitriani.jpg" />
+          <Card nama="Aurellia Dian Hanifah" jabatan="Anggota" foto="/images/anggotasosbud/Aurellia Dian Hanifah.jpg" />
+          <Card nama="Dani Taufikurrohman" jabatan="Anggota" foto="/images/anggotasosbud/Dani Taufiqqurahman.jpg" />
+          <Card nama="David Charles Duval" jabatan="Anggota" foto="/images/anggotasosbud/David Charles Duval.jpeg" />
+          <Card nama="Dini Yusriah" jabatan="Anggota" foto="/images/anggotasosbud/Dini Yusriah.jpg" />
+          <Card nama="Hikbal Maulana" jabatan="Anggota" foto="/images/anggotasosbud/Hikbal Maulana.png" />
+          <Card nama="Ibnu Salam Yakin" jabatan="Anggota" foto="/images/anggotasosbud/Ibnu Salam Yakin.jpg" />
+          <Card nama="Juliana Moza" jabatan="Anggota" foto="/images/anggotasosbud/Juliana Moza.jpg" />
+          <Card nama="Rakha Mazaya Haeru" jabatan="Anggota" foto="/images/anggotasosbud/Rakha Mazaya Haeru.jpg" />
+          <Card nama="Rianto Nababan" jabatan="Anggota" foto="/images/anggotasosbud/" />
         </div>
 
-        {/* ANGGOTA PSDM */}
         <h3 className="subjudul">Anggota Pengembangan Sumber Daya Manusia</h3>
         <div className="grid">
           <Card nama="Adiwidya Sastrawijaya" jabatan="Anggota" foto="/images/default.png" />
