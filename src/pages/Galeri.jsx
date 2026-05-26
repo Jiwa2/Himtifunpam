@@ -105,7 +105,7 @@ export default function Galeri() {
 
             <Link to="/">Home</Link>
             <Link to="/struktur">Struktur Organisasi</Link>
-            <Link to="/galeri">Galeri Proker</Link>
+            <Link to="/department">Department</Link>
             <Link to="/produk">Produk HIMTIF</Link>
             <Link to="/pemira">Pemira</Link>
           </div>

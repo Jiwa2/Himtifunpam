@@ -26,7 +26,7 @@ export default function Struktur() {
             <button className="close" onClick={() => setOpen(false)}>✕</button>
 
             <Link to="/">Home</Link>
-            <Link to="/struktur">Struktur</Link>
+            <Link to="/department">Department</Link>
             <Link to="/galeri">Galeri</Link>
             <Link to="/produk">Produk</Link>
             <Link to="/pemira">Pemira</Link>
@@ -193,16 +193,16 @@ export default function Struktur() {
 
         <h3 className="subjudul">Anggota Pengembangan Sumber Daya Manusia</h3>
         <div className="grid">
-          <Card nama="Adiwidya Sastrawijaya" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Alfiyah Syafinahtun Nashah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Bunga Alya Ramadhan" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Didin Nugraha" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Haya Haifa Hilmy" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Miftakhul Fal'ah" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Oktanaka" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Sulthan Arya Satwika" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Tania Syafilla Gifani" jabatan="Anggota" foto="/images/default.png" />
-          <Card nama="Trinancy Hadinastiti" jabatan="Anggota" foto="/images/default.png" />
+          <Card nama="Adiwidya Sastrawijaya" jabatan="Anggota" foto="/images/anggotapsdm/Adiwidya Sastrawijaya.jpg" />
+          <Card nama="Alfiyah Syafinahtun Nashah" jabatan="Anggota" foto="/images/anggotapsdm/Alfiyah Syafinahtun Nashah.jpeg" />
+          <Card nama="Bunga Alya Ramadhan" jabatan="Anggota" foto="/images/anggotapsdm/Bunga Alya Ramadhan.PNG" />
+          <Card nama="Didin Nugraha" jabatan="Anggota" foto="/images/anggotapsdm/Didin Nugraha.jpg" />
+          <Card nama="Haya Haifa Hilmy" jabatan="Anggota" foto="/images/anggotapsdm/Haya Haifa Hilmy.png" />
+          <Card nama="Miftakhul Fal'ah" jabatan="Anggota" foto="/images/anggotapsdm/Miftakhul Fal_ah - 241011400237.png" />
+          <Card nama="Oktanaka" jabatan="Anggota" foto="/images/anggotapsdm/Oktanaka.jpg" />
+          <Card nama="Sulthan Arya Satwika" jabatan="Anggota" foto="/images/anggotapsdm/Sulthan Arya Satwika.jpg" />
+          <Card nama="Tania Syafilla Gifani" jabatan="Anggota" foto="/images/anggotapsdm/Tania Syafilla Gifani.PNG" />
+          <Card nama="Trinancy Harinastiti" jabatan="Anggota" foto="/images/anggotapsdm/Trinancy Harinastiti.webp" />
         </div>
 
       </div>

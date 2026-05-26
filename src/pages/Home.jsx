@@ -50,6 +50,7 @@ export default function Home() {
             <Link to="/galeri" onClick={handleClose}>Galeri Proker</Link>
             <Link to="/produk" onClick={handleClose}>Produk HIMTIF</Link>
             <Link to="/pemira" onClick={handleClose}>Pemira</Link>
+            <Link to="/department" onClick={handleClose}>Department</Link>
           </div>
         </div>
       )}

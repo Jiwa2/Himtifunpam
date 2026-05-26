@@ -1,153 +1,258 @@
-.struktur-wrapper {
-  min-height: 100vh;
-  background: #e6c79c;
+/* ==========================================================================
+   1. RESET BASICS (PEMBERSIHAN TOTAL AMBLES)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+.department-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFE0B2 !important; /* Memaksa background utama tetap warna request */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column; /* Membuat navbar dan konten berurutan ke bawah, bukan bertumpuk */
+}
+
+/* ==========================================================================
+   2. NAVBAR SETTINGS (ANTI KEPOTONG / NO FIXED / NO ABSOLUTE)
+   ========================================================================== */
 .navbar {
-  background: #D3A376;
-  padding: 10px 20px;
+  background: #D3A376; 
+  padding: 12px 24px;
+  width: 100%;
+  position: relative; /* Menjamin dia memakan space layout atas */
+  display: block;
 }
 
 .navbar-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo kiri, Burger kanan */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo-link {
+  display: flex;
   align-items: center;
 }
 
 .logo-img {
   height: 40px;
+  width: auto;
+  display: block;
 }
 
 .burger {
-  font-size: 24px;
+  font-size: 26px;
   background: none;
   border: none;
-  color: white;
+  color: white; 
   cursor: pointer;
-}
-
-/* CONTAINER */
-.container {
-  padding: 40px 15px;
-  text-align: center;
+  padding: 5px;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.judul {
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 28px;
-}
-
-.subjudul {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.bph-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 140px);
+  align-items: center;
   justify-content: center;
-  gap: 55px;
+}
+
+/* ==========================================================================
+   3. CONTAINER KONTEN (JARAK AMAN MAKSIMAL)
+   ========================================================================== */
+.department-container {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  /* Ditambahkan padding top melimpah untuk mendorong teks menjauh dari area atas */
+  padding: 60px 20px 40px 20px; 
 }
 
-.bph-grid > :nth-child(1) {
-  grid-column: 2;
+.department-header-text {
+  text-align: center;
+  margin-bottom: 40px;
+  display: block;
 }
 
-.bph-grid > :nth-child(2) {
-  grid-column: 3;
+.judul-halaman {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4A3728;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-.bph-grid > :nth-child(3) {
-  grid-column: 1;
+.deskripsi-halaman {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #5d4037;
+  text-align: justify;
 }
 
-.bph-grid > :nth-child(4) {
-  grid-column: 2;
+/* ==========================================================================
+   4. DROPDOWN LIST UTAMA DEPARTEMEN
+   ========================================================================== */
+.dept-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.bph-grid > :nth-child(5) {
-  grid-column: 3;
+.dept-item {
+  width: 100%;
+  border-radius: 12px;
 }
 
-.bph-grid > :nth-child(6) {
-  grid-column: 4;
+.dept-toggle-btn {
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, #f9e2c4, #f3d1a4);
+  border: 1px solid #e0be92;
+  border-radius: 10px;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4A3728;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.pengurus-grid {
+/* ==========================================================================
+   5. CARD DENGAN WARNA GRADASI ( #4A3728 -> #FFE0B2 )
+   ========================================================================== */
+.dept-content-card {
+  margin-top: 8px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #4A3728 0%, #FFE0B2 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.dept-profile-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.pengurus-row {
+.dept-avatar-circle {
+  width: 110px;
+  height: 110px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  column-gap: 50px;
-  row-gap: 55px;
-  flex-wrap: wrap;
-  padding: 0 10px;
+  border: 3px solid #ffffff;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #555;
 }
 
-.pengurus-row.psdm {
-  flex-wrap: nowrap;
-  gap: 50px; 
+.dept-kadep-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff; 
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 140px));
-  justify-content: center;
-  justify-items: center;
-  gap: 45px;
-  max-width: 1000px;
-  margin: 0 auto;
+.dept-description-text {
+  font-size: 14px;
+  color: #2b1810; 
+  max-width: 700px;
+  margin-top: 5px;
 }
 
-.card-struktur {
-  width: 140px;
-  background: #d3a376;
+/* ==========================================================================
+   6. SUB-LIST PROGRAM KERJA DI DALAM CARD
+   ========================================================================== */
+.proker-section {
+  margin-top: 20px;
+}
+
+.proker-section-header {
+  width: fit-content;
+  margin: 0 auto 15px auto;
+  padding: 6px 25px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.proker-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proker-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.proker-toggle-btn {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #d2beab;
+  border-radius: 8px;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  color: #4A3728;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proker-detail-panel {
+  background: rgba(255, 255, 255, 0.95);
   padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  transition: all 0.25s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 3px solid #4A3728;
 }
 
-.card-struktur:hover {
-  transform: translateY(-6px);
-}
-
-.foto {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.card-struktur h4 {
+.proker-detail-row {
+  display: flex;
+  align-items: center;
   font-size: 13px;
-  margin-bottom: 6px;
-  min-height: 32px;
+  color: #333;
 }
 
-.card-struktur p {
-  font-size: 11px;
-  background: #c69360;
-  padding: 5px;
-  border-radius: 5px;
+.detail-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #4A3728;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
+.detail-label {
+  font-weight: bold;
+  min-width: 160px;
+}
+
+/* ==========================================================================
+   7. SIDEBAR OVERLAY & NAVIGATION
+   ========================================================================== */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
@@ -182,76 +287,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-
-  .bph-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-  }
-
-  .bph-grid > * {
-    grid-column: auto;
-  }
-
-  .pengurus-row.psdm {
-    flex-wrap: wrap;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-
-  .container {
-    padding: 30px 10px;
-    gap: 45px;
-  }
-
-  .judul {
-    font-size: 24px;
-  }
-
-  .subjudul {
-    font-size: 18px;
-  }
-
-  .bph-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .pengurus-row {
-    gap: 20px; 
-    padding: 0;
-  }
-
-  .pengurus-row.psdm {
-    gap: 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .card-struktur {
-    width: 100%;
-    max-width: 130px;
-    padding: 12px;
-  }
-
-  .foto {
-    width: 65px;
-    height: 65px;
-  }
-
-  .card-struktur h4 {
-    font-size: 12px;
-  }
-
-  .card-struktur p {
-    font-size: 10px;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }

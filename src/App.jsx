@@ -6,6 +6,7 @@ import Galeri from "./pages/Galeri";
 import Produk from "./pages/Produk";
 import Pemira from "./pages/Pemira";
 import Formpemira from "./pages/Formpemira";
+import Department from "./pages/Department"
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/produk" element={<Produk />} />
       <Route path="/pemira" element={<Pemira />} />
       <Route path="/Formpemira" element={<Formpemira />} />
+      <Route path="/department" element={<Department />} />
     </Routes>
   );
 }

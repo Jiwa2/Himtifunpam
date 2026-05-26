@@ -59,7 +59,7 @@ export default function Formpemira() {
                 <Link to="/pemira" onClick={() => setOpen(false)}>
                   Pemira
                 </Link>
-              </div>
+              </div>  
             </div>
           )}
 

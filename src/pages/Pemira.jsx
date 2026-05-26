@@ -36,7 +36,7 @@ export default function Pemira() {
               <Link to="/struktur" onClick={() => setOpen(false)}>Struktur</Link>
               <Link to="/galeri" onClick={() => setOpen(false)}>Galeri</Link>
               <Link to="/produk" onClick={() => setOpen(false)}>Produk</Link>
-              <Link to="/pemira" onClick={() => setOpen(false)}>Pemira</Link>
+              <Link to="/department" onClick={() => setOpen(false)}>Department</Link>
 
             </div>
           </div>
