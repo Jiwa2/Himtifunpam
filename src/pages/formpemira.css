@@ -128,7 +128,8 @@
   font-weight: 500;
 }
 
-.input-group input {
+.input-group input,
+.input-group select {
   padding: 16px;
   border-radius: 30px;
   border: none;
@@ -136,16 +137,24 @@
   color: white;
   outline: none;
   font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group select:focus {
   background: #b37d4a;
   box-shadow: 0 0 0 3px rgba(92, 70, 51, 0.2);
 }
 
 .input-group input::placeholder {
   color: rgba(255,255,255,0.7);
+}
+
+.input-group select option {
+  background: #c69360;
+  color: white;
 }
 
 .pilihan-title {
@@ -177,7 +186,6 @@
   border-color: #a87b54;
 }
 
-/* --- TRICK UTAMA: STYLE VISUAL KETIKA PASLON DIPILIH --- */
 .paslon-card:has(input:checked) {
   background: rgba(255, 255, 255, 0.25);
   border: 3px solid #ffffff;

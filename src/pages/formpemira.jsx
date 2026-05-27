@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 import "./formpemira.css";
 
 export default function Formpemira() {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  
   const [formData, setFormData] = useState({
     nama: "",
     nim: "",
     kelas: "",
+    jabatan: "",
     paslon: ""
   });
 
@@ -18,9 +22,10 @@ export default function Formpemira() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.nama || !formData.nim || !formData.kelas) {
+    
+    if (!formData.nama || !formData.nim || !formData.kelas || !formData.jabatan) {
       alert("Silakan lengkapi data diri Anda terlebih dahulu!");
       return;
     }
@@ -29,84 +34,72 @@ export default function Formpemira() {
       return;
     }
     
-    // Tampilkan data pilihan di console atau integrasikan dengan API backend
-    console.log("Data Pemilih & Pilihan:", formData);
-    alert(`Terima kasih ${formData.nama}, pilihan Anda berhasil dikirim!`);
+    setLoading(true);
+
+    const { data, error } = await supabase
+      .from("votes")
+      .insert([
+        {
+          nama: formData.nama,
+          nim: formData.nim,
+          kode_kelas: formData.kelas,
+          jabatan: formData.jabatan,
+          paslon: formData.paslon,
+        },
+      ]);
+
+    setLoading(false);
+
+    if (error) {
+      if (error.code === "23505") {
+        alert("⚠️ Gagal! NIM atau Kelas ini sudah terdaftar untuk memberikan suara.");
+      } else {
+        alert("Terjadi kesalahan sistem: " + error.message);
+      }
+    } else {
+      alert(`🎉 Berhasil! Terima kasih ${formData.nama}, suara Anda untuk posisi ${formData.jabatan} berhasil dikirim!`);
+      
+      setFormData({
+        nama: "",
+        nim: "",
+        kelas: "",
+        jabatan: "",
+        paslon: ""
+      });
+    }
   };
 
   return (
     <div className="formpemira-wrapper">
       <div className="formpemira-container">
-        
         <div className="formpemira-card">
           
           <div className="formpemira-navbar">
             <Link to="/">
-              <img
-                src="/images/logohimtif.png"
-                alt="HIMTIF"
-                className="logo-img"
-              />
+              <img src="/images/logohimtif.png" alt="HIMTIF" className="logo-img" />
             </Link>
-
-            <button
-              className="burger"
-              onClick={() => setOpen(true)}
-            >
-              ☰
-            </button>
+            <button className="burger" onClick={() => setOpen(true)}>☰</button>
           </div>
 
           {open && (
-            <div
-              className="sidebar-overlay"
-              onClick={() => setOpen(false)}
-            >
-              <div
-                className="sidebar"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  className="close"
-                  onClick={() => setOpen(false)}
-                >
-                  ✕
-                </button>
-
-                <Link to="/" onClick={() => setOpen(false)}>
-                  Home
-                </Link>
-                <Link to="/struktur" onClick={() => setOpen(false)}>
-                  Struktur
-                </Link>
-                <Link to="/galeri" onClick={() => setOpen(false)}>
-                  Galeri
-                </Link>
-                <Link to="/produk" onClick={() => setOpen(false)}>
-                  Produk
-                </Link>
-                <Link to="/pemira" onClick={() => setOpen(false)}>
-                  Pemira
-                </Link>
+            <div className="sidebar-overlay" onClick={() => setOpen(false)}>
+              <div className="sidebar" onClick={(e) => e.stopPropagation()}>
+                <button className="close" onClick={() => setOpen(false)}>✕</button>
+                <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+                <Link to="/struktur" onClick={() => setOpen(false)}>Struktur</Link>
+                <Link to="/galeri" onClick={() => setOpen(false)}>Galeri</Link>
+                <Link to="/produk" onClick={() => setOpen(false)}>Produk</Link>
+                <Link to="/pemira" onClick={() => setOpen(false)}>Pemira</Link>
               </div>  
             </div>
           )}
 
           <div className="formpemira-header">
-            <img
-              src="/images/logohimtif.png"
-              className="logo"
-              alt="logo"
-            />
+            <img src="/images/logohimtif.png" className="logo" alt="logo" />
           </div>
 
-          <h2 className="title">
-            FORM PEMIRA HIMTIF
-          </h2>
-
-          <p className="desc">
-            Silakan isi data diri dan pilih pasangan calon.
-          </p>
+          <h2 className="title">FORM PEMIRA HIMTIF</h2>
+          <p className="desc">Silakan isi data diri dan pilih pasangan calon.</p>
 
           <form className="form" onSubmit={handleSubmit}>
             <div className="input-group">
@@ -117,6 +110,7 @@ export default function Formpemira() {
                 value={formData.nama}
                 onChange={handleChange}
                 placeholder="Masukkan nama"
+                required
               />
             </div>
 
@@ -128,6 +122,7 @@ export default function Formpemira() {
                 value={formData.nim}
                 onChange={handleChange}
                 placeholder="Masukkan NIM"
+                required
               />
             </div>
 
@@ -139,12 +134,26 @@ export default function Formpemira() {
                 value={formData.kelas}
                 onChange={handleChange}
                 placeholder="Masukkan kelas"
+                required
               />
             </div>
 
-            <h3 className="pilihan-title">
-              Pilih Paslon
-            </h3>
+            <div className="input-group">
+              <label>Jabatan</label>
+              <select 
+                name="jabatan"
+                value={formData.jabatan} 
+                onChange={handleChange}
+                required
+                style={{ cursor: 'pointer' }}
+              >
+                <option value="" disabled hidden>Masukkan jabatan</option>
+                <option value="Ketua Kelas">Ketua Kelas</option>
+                <option value="Wakil Kelas">Wakil Kelas</option>
+              </select>
+            </div>
+
+            <h3 className="pilihan-title">Pilih Paslon</h3>
 
             <div className="paslon-container">
               <label className="paslon-card">
@@ -156,26 +165,10 @@ export default function Formpemira() {
                   onChange={handleChange}
                   hidden
                 />
-                <div className="paslon-header">
-                  Paslon 1
-                </div>
+                <div className="paslon-header">Paslon 1</div>
                 <div className="paslon-form-content">
-                  <div className="calon">
-                    <img
-                      src="/images/user.png"
-                      alt="Ketua"
-                      className="foto"
-                    />
-                    <p>Ketua</p>
-                  </div>
-                  <div className="calon">
-                    <img
-                      src="/images/user.png"
-                      alt="Wakil"
-                      className="foto"
-                    />
-                    <p>Wakil</p>
-                  </div>
+                  <div className="calon"><img src="/images/user.png" alt="Ketua" className="foto" /><p>Ketua</p></div>
+                  <div className="calon"><img src="/images/user.png" alt="Wakil" className="foto" /><p>Wakil</p></div>
                 </div>
               </label>
 
@@ -188,40 +181,20 @@ export default function Formpemira() {
                   onChange={handleChange}
                   hidden
                 />
-                <div className="paslon-header">
-                  Paslon 2
-                </div>
+                <div className="paslon-header">Paslon 2</div>
                 <div className="paslon-form-content">
-                  <div className="calon">
-                    <img
-                      src="/images/user.png"
-                      alt="Ketua"
-                      className="foto"
-                    />
-                    <p>Ketua</p>
-                  </div>
-                  <div className="calon">
-                    <img
-                      src="/images/user.png"
-                      alt="Wakil"
-                      className="foto"
-                    />
-                    <p>Wakil</p>
-                  </div>
+                  <div className="calon"><img src="/images/user.png" alt="Ketua" className="foto" /><p>Ketua</p></div>
+                  <div className="calon"><img src="/images/user.png" alt="Wakil" className="foto" /><p>Wakil</p></div>
                 </div>
               </label>
             </div>
 
-            <button
-              type="submit"
-              className="submit-btn"
-            >
-              Kirim Pilihan
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? "Mengirim Pilihan..." : "Kirim Pilihan"}
             </button>
           </form>
 
         </div>
-
       </div>
     </div>
   );
