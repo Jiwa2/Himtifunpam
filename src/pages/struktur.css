@@ -92,11 +92,11 @@
 .card-struktur .foto {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center top;
-  background-color: #D9D9D9;
+  object-fit: contain;
+  background-color: #ffffff;
   border: 2px solid #000000;
   border-radius: 2px;
+  padding: 6px;
 }
 
 .card-struktur h4 {
@@ -129,13 +129,36 @@
 }
 
 .bph-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
-  margin-bottom: 30px;
-  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.bph-grid .card-struktur:nth-child(1),
+.bph-grid .card-struktur:nth-child(2) {
+  flex: 0 1 calc(50% - 20px);
+  max-width: 210px;
+  order: 1;
+}
+
+.bph-grid .card-struktur:nth-child(3),
+.bph-grid .card-struktur:nth-child(4),
+.bph-grid .card-struktur:nth-child(5),
+.bph-grid .card-struktur:nth-child(6) {
+  flex: 0 1 calc(25% - 20px);
+  max-width: 180px;
+  order: 2;
+}
+
+.bph-grid::after {
+  content: "";
+  flex-basis: 100%;
+  height: 0;
+  order: 1;
 }
 
 .pengurus-grid {
@@ -203,9 +226,6 @@
 }
 
 @media (max-width: 1024px) {
-  .bph-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -213,35 +233,50 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px 15px;
+    padding: 20px 12px;
   }
 
   .judul {
-    font-size: 22px;
+    font-size: 20px;
     margin: 35px 0 20px 0;
   }
 
   .subjudul {
-    font-size: 15px;
+    font-size: 14px;
     margin: 25px 0 15px 0;
   }
 
   .bph-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
+    max-width: 100%;
   }
 
-  .bph-grid .card-struktur:nth-child(1) { order: 1; }
-  .bph-grid .card-struktur:nth-child(2) { order: 2; }
-  .bph-grid .card-struktur:nth-child(3) { order: 3; }
-  .bph-grid .card-struktur:nth-child(4) { order: 4; }
-  .bph-grid .card-struktur:nth-child(5) { order: 5; }
-  .bph-grid .card-struktur:nth-child(6) { order: 6; }
+  .bph-grid::after {
+    display: none;
+  }
+
+  .bph-grid .card-struktur:nth-child(1),
+  .bph-grid .card-struktur:nth-child(2) {
+    grid-column: span 1;
+    max-width: 100%;
+    order: unset;
+  }
+
+  .bph-grid .card-struktur:nth-child(3),
+  .bph-grid .card-struktur:nth-child(4),
+  .bph-grid .card-struktur:nth-child(5),
+  .bph-grid .card-struktur:nth-child(6) {
+    grid-column: span 1;
+    max-width: 100%;
+    order: unset;
+  }
 
   .pengurus-row {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
   }
 
   .pengurus-row .card-struktur {
@@ -249,22 +284,42 @@
   }
 
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
   }
 
   .card-struktur {
-    padding: 10px;
+    padding: 12px 8px;
     gap: 8px;
+  }
+
+  .card-struktur .foto {
+    aspect-ratio: 1 / 1;
+    padding: 4px;
   }
 
   .card-struktur h4 {
     font-size: 11px;
-    height: 30px;
+    height: 32px;
   }
 
   .card-struktur p {
-    font-size: 10px;
-    padding: 4px 6px;
+    font-size: 9.5px;
+    padding: 4px 4px;
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInUp 0.6s ease-out both;
 }

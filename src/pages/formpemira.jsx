@@ -4,6 +4,35 @@ import "./formpemira.css";
 
 export default function Formpemira() {
   const [open, setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    nama: "",
+    nim: "",
+    kelas: "",
+    paslon: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.nama || !formData.nim || !formData.kelas) {
+      alert("Silakan lengkapi data diri Anda terlebih dahulu!");
+      return;
+    }
+    if (!formData.paslon) {
+      alert("Silakan pilih salah satu pasangan calon (Paslon)!");
+      return;
+    }
+    
+    // Tampilkan data pilihan di console atau integrasikan dengan API backend
+    console.log("Data Pemilih & Pilihan:", formData);
+    alert(`Terima kasih ${formData.nama}, pilihan Anda berhasil dikirim!`);
+  };
 
   return (
     <div className="formpemira-wrapper">
@@ -79,11 +108,14 @@ export default function Formpemira() {
             Silakan isi data diri dan pilih pasangan calon.
           </p>
 
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label>Nama</label>
               <input
                 type="text"
+                name="nama"
+                value={formData.nama}
+                onChange={handleChange}
                 placeholder="Masukkan nama"
               />
             </div>
@@ -92,6 +124,9 @@ export default function Formpemira() {
               <label>NIM</label>
               <input
                 type="text"
+                name="nim"
+                value={formData.nim}
+                onChange={handleChange}
                 placeholder="Masukkan NIM"
               />
             </div>
@@ -100,6 +135,9 @@ export default function Formpemira() {
               <label>Kelas</label>
               <input
                 type="text"
+                name="kelas"
+                value={formData.kelas}
+                onChange={handleChange}
                 placeholder="Masukkan kelas"
               />
             </div>
@@ -114,6 +152,8 @@ export default function Formpemira() {
                   type="radio"
                   name="paslon"
                   value="1"
+                  checked={formData.paslon === "1"}
+                  onChange={handleChange}
                   hidden
                 />
                 <div className="paslon-header">
@@ -144,6 +184,8 @@ export default function Formpemira() {
                   type="radio"
                   name="paslon"
                   value="2"
+                  checked={formData.paslon === "2"}
+                  onChange={handleChange}
                   hidden
                 />
                 <div className="paslon-header">
