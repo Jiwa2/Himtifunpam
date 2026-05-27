@@ -40,11 +40,13 @@ export default function Struktur() {
         <h2 className="judul">BADAN PENGURUS HARIAN</h2>
 
         <div className="bph-grid">
+          <Card nama="Nurlayla Fitri" jabatan="Sekretaris Umum 1" foto="/images/himtif/Nurlayla fitri.png" />
+          <Card nama="Aulia Putri" jabatan="Sekretaris Umum 2" foto="/images/himtif/Aulia Putri .png" />
+
           <Card nama="Saldy Saputra" jabatan="Ketua Umum" foto="/images/Saldy Saputra .png" />
           <Card nama="Fat Khudin" jabatan="Wakil Ketua Umum" foto="/images/himtif/Fat khudin.png" />
 
-          <Card nama="Nurlayla Fitri" jabatan="Sekretaris Umum 1" foto="/images/himtif/Nurlayla fitri.png" />
-          <Card nama="Aulia Putri" jabatan="Sekretaris Umum 2" foto="/images/himtif/Aulia Putri .png" />
+
           <Card nama="Medina Fikanti" jabatan="Bendahara Umum 1" foto="/images/himtif/Medina Fikanti.png" />
           <Card nama="Amelia Zahwa H.S" jabatan="Bendahara Umum 2" foto="/images/himtif/Amelia Zahwa Habilla Syifa.png" />
         </div>
