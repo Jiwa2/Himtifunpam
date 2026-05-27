@@ -15,6 +15,7 @@ export default function Home() {
 
   return (
     <div className="home-wrapper">
+      {/* NAVBAR */}
       <nav className="navbar">
         <div className="navbar-inner">
           <img
@@ -22,28 +23,35 @@ export default function Home() {
             alt="HIMTIF"
             className="navbar-logo"
           />
-          <ul className="navbar-menu">
+          
+          {/* Menu Desktop: Otomatis sembunyi di mobile (hidden), muncul di desktop (md:flex) */}
+          <ul className="navbar-menu hidden md:flex">
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#tentang">Tentang</a></li>
             <li><a href="#visi">Visi</a></li>
             <li><a href="#filosofi">Filosofi</a></li>
           </ul>
+
+          {/* Tombol Burger Mobile: Otomatis muncul di mobile (block), sembunyi di desktop (md:hidden) */}
           <button 
-            className="burger"
+            type="button"
+            className="burger-btn block md:hidden"
             onClick={() => setOpen(true)}
+            aria-label="Open Menu"
           >
             ☰
           </button>
         </div>
       </nav>
 
+      {/* SIDEBAR MOBILE OVERLAY */}
       {open && (
         <div
           className={`sidebar-overlay ${closing ? "closing" : ""}`}
           onClick={handleClose}
         >
           <div className="sidebar" onClick={(e) => e.stopPropagation()}>
-            <button className="close" onClick={handleClose}>
+            <button type="button" className="close-btn" onClick={handleClose}>
               ✕
             </button>
             <Link to="/struktur" onClick={handleClose}>Struktur Organisasi</Link>
@@ -55,6 +63,7 @@ export default function Home() {
         </div>
       )}
 
+      {/* SECTION HERO */}
       <section id="beranda" className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
@@ -63,6 +72,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION TENTANG */}
       <section id="tentang" className="tentang">
         <div className="container">
           <h2>Tentang HIMTIF</h2>
@@ -73,6 +83,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION VISI MISI */}
       <section id="visi" className="visi">
         <div className="container">
           <div className="visi-misi-grid">
@@ -100,6 +111,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION FILOSOFI */}
       <section id="filosofi" className="filosofi">
         <div className="container filosofi-wrapper">
           <h2 className="filosofi-title">Filosofi Lambang HIMTIF</h2>
@@ -128,6 +140,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-left">

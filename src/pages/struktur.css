@@ -233,7 +233,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px 12px;
+    padding: 20px 8px;
   }
 
   .judul {
@@ -248,8 +248,8 @@
 
   .bph-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
     max-width: 100%;
   }
 
@@ -259,7 +259,7 @@
 
   .bph-grid .card-struktur:nth-child(1),
   .bph-grid .card-struktur:nth-child(2) {
-    grid-column: span 1;
+    grid-column: span 2;
     max-width: 100%;
     order: unset;
   }
@@ -275,37 +275,42 @@
 
   .pengurus-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .pengurus-row .card-struktur {
     width: 100%;
+    grid-column: span 1;
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 12px;
-  }
-
-  .card-struktur {
-    padding: 12px 8px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
   }
 
+  .card-struktur {
+    padding: 8px 4px;
+    gap: 6px;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 0px #000000;
+  }
+
   .card-struktur .foto {
-    aspect-ratio: 1 / 1;
-    padding: 4px;
+    border: 1px solid #000000;
+    padding: 2px;
   }
 
   .card-struktur h4 {
-    font-size: 11px;
-    height: 32px;
+    font-size: 9px;
+    height: 24px;
   }
 
   .card-struktur p {
-    font-size: 9.5px;
-    padding: 4px 4px;
+    font-size: 8px;
+    padding: 2px 4px;
+    border: 1px solid #000000;
   }
 }
 

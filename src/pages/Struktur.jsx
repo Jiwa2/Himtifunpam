@@ -7,13 +7,11 @@ export default function Struktur() {
 
   return (
     <div className="struktur-wrapper">
-
       <nav className="navbar">
         <div className="navbar-inner">
           <Link to="/">
             <img src="/images/logohimtif.png" className="logo-img" />
           </Link>
-
           <button className="burger" onClick={() => setOpen(true)}>
             ☰
           </button>
@@ -24,7 +22,6 @@ export default function Struktur() {
         <div className="sidebar-overlay" onClick={() => setOpen(false)}>
           <div className="sidebar" onClick={(e) => e.stopPropagation()}>
             <button className="close" onClick={() => setOpen(false)}>✕</button>
-
             <Link to="/">Home</Link>
             <Link to="/department">Department</Link>
             <Link to="/galeri">Galeri</Link>
@@ -35,69 +32,59 @@ export default function Struktur() {
       )}
 
       <div className="container">
-
-        {/* ================= BPH ================= */}
         <h2 className="judul">BADAN PENGURUS HARIAN</h2>
-
         <div className="bph-grid">
           <Card nama="Saldy Saputra" jabatan="Ketua Umum" foto="/images/Saldy Saputra .png" />
           <Card nama="Fat Khudin" jabatan="Wakil Ketua Umum" foto="/images/himtif/Fat khudin.png" />
-
           <Card nama="Nurlayla Fitri" jabatan="Sekretaris Umum 1" foto="/images/himtif/Nurlayla fitri.png" />
           <Card nama="Aulia Putri" jabatan="Sekretaris Umum 2" foto="/images/himtif/Aulia Putri .png" />
-
           <Card nama="Medina Fikanti" jabatan="Bendahara Umum 1" foto="/images/himtif/Medina Fikanti.png" />
           <Card nama="Amelia Zahwa H.S" jabatan="Bendahara Umum 2" foto="/images/himtif/Amelia Zahwa Habilla Syifa.png" />
         </div>
 
-        {/* ================= PENGURUS ================= */}
         <h2 className="judul">KEPENGURUSAN</h2>
 
-        {/* RISTEK */}
         <h3 className="subjudul">Department Riset dan Teknologi</h3>
         <div className="pengurus-grid">
           <div className="pengurus-row">
             <Card nama="Muhammad Jiwa Islamutidar" jabatan="Kepala Department Ristek" foto="/images/ristek/Muhammad Jiwa Islamutidar.png" />
             <Card nama="Ahmad Renaldy" jabatan="Sekretaris Department" foto="/images/ristek/Ahmad Renaldy.png" />
             <Card nama="Mohammad Arief Ardiansyah" jabatan="Staff" foto="/images/ristek/Mohammad Arief Ardiansyah.png" />
+            <Card nama="Cintya Laura Melagro" jabatan="Staff" foto="/images/ristek/Cintya Laura Melagro.png" />
           </div>
           <div className="pengurus-row">
-            <Card nama="Cintya Laura Melagro" jabatan="Staff" foto="/images/ristek/Cintya Laura Melagro.png" />
             <Card nama="Abu Ziyad Al Katani" jabatan="Staff" foto="/images/ristek/Abu Ziyad Al Katani.png" />
           </div>
         </div>
 
-        {/* HUMAS */}
         <h3 className="subjudul">Department Humas</h3>
         <div className="pengurus-grid">
           <div className="pengurus-row">
             <Card nama="Arkananta Emier Pradipta" jabatan="Kepala Department Humas" foto="/images/humas/ARKANANTA EMIER PRADIPTA.png" />
             <Card nama="Zaydan Azfar" jabatan="Sekretaris Department" foto="/images/humas/ZAYDAN AZFAR.png" />
             <Card nama="Raven Firgiasyah" jabatan="Staff" foto="/images/humas/RAVEN FIRGIASYAH.png" />
+            <Card nama="Sihabudin Firmansyah" jabatan="Staff" foto="/images/humas/SIHABUDIN FIRMANSYAH.png" />
           </div>
           <div className="pengurus-row">
-            <Card nama="Sihabudin Firmansyah" jabatan="Staff" foto="/images/humas/SIHABUDIN FIRMANSYAH.png" />
             <Card nama="Muhammad Rafli Firdaus" jabatan="Staff" foto="/images/humas/MUHAMMAD RAFLI FIRDAUS.png" />
             <Card nama="Paris Nurfadhillah" jabatan="Staff" foto="/images/humas/PARIS NURFADHILLAH.png" />
           </div>
         </div>
 
-        {/* MINFO */}
         <h3 className="subjudul">Department Media Informasi</h3>
         <div className="pengurus-grid">
           <div className="pengurus-row">
             <Card nama="Bagas Anwar Meiqadr" jabatan="Kepala Department Minfo" foto="/images/minfo/BAGAS ANWAR MEIQADR.png" />
             <Card nama="Lidya Septia Nita Darmawati" jabatan="Sekretaris Department" foto="/images/minfo/LIDYA SEPTIA NITA DARMAWATI.png" />
             <Card nama="Ika Auliya Rusyadah" jabatan="Staff" foto="/images/minfo/IKA AULIYA RUSYADAH.png" />
+            <Card nama="Dita Adelia Putri" jabatan="Staff" foto="/images/minfo/DITA ADELIA PUTRI.png" />
           </div>
           <div className="pengurus-row">
-            <Card nama="Dita Adelia Putri" jabatan="Staff" foto="/images/minfo/DITA ADELIA PUTRI.png" />
             <Card nama="Olivia Ramadhani" jabatan="Staff" foto="/images/minfo/OLIVIA RAMADHANI.png" />
             <Card nama="Suci Oktaviani" jabatan="Staff" foto="/images/minfo/SUCI OKTAVIANI.png" />
           </div>
         </div>
 
-        {/* SOSBUD */}
         <h3 className="subjudul">Department Sosial Budaya</h3>
         <div className="pengurus-grid">
           <div className="pengurus-row">
@@ -113,23 +100,18 @@ export default function Struktur() {
           </div>
         </div>
 
-        {/* PSDM */}
         <h3 className="subjudul">Department Pengembangan Sumber Daya Manusia</h3>
         <div className="pengurus-grid">
           <div className="pengurus-row">
             <Card nama="Rifky Ramadhan" jabatan="Kepala Department PSDM" foto="/images/PSDM/Rifky Ramadhan Putra Permana.png" />
             <Card nama="Bilqis Nilam Cahya" jabatan="Sekretaris Department" foto="/images/PSDM/Bilqis Nilam Cahya.png" />
-          </div>
-          <div className="pengurus-row">
             <Card nama="Niko Putra Yusanto" jabatan="Staff" foto="/images/PSDM/Niko Putra Yusanto.png" />
             <Card nama="Bening Fajriatul Hawa" jabatan="Staff" foto="/images/PSDM/Bening Fajriatul Hawa.png" />
           </div>
         </div>
 
-        {/* ================= ANGGOTA ================= */}
         <h2 className="judul">ANGGOTA</h2>
 
-        {/* ANGGOTA RISTEK */}
         <h3 className="subjudul">Anggota Riset dan Teknologi</h3>
         <div className="grid">
           <Card nama="Afzal Putra Hariyudha" jabatan="Anggota" foto="/images/anggotaristek/Afzal Putra Hariyudha.jpg" />
@@ -147,7 +129,6 @@ export default function Struktur() {
           <Card nama="Rizky Komarullail" jabatan="Anggota" foto="/images/anggotaristek/Rizky Komarullail.jpg" />
         </div>
 
-        {/* ANGGOTA HUMAS */}
         <h3 className="subjudul">Anggota Hubungan Masyarakat</h3>
         <div className="grid">
           <Card nama="Angel Ajeng Gita Pertiwi" jabatan="Anggota" foto="/images/humas/Angel Ajeng Gita Pertiwi.png" />
@@ -205,7 +186,6 @@ export default function Struktur() {
           <Card nama="Tania Syafilla Gifani" jabatan="Anggota" foto="/images/anggotapsdm/Tania Syafilla Gifani.PNG" />
           <Card nama="Trinancy Harinastiti" jabatan="Anggota" foto="/images/anggotapsdm/Trinancy Harinastiti.webp" />
         </div>
-
       </div>
     </div>
   );
