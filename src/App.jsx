@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Struktur from "./pages/struktur";
-import Galeri from "./pages/galeri";
-import Produk from "./pages/produk";
-import Pemira from "./pages/pemira";
+import Struktur from "./pages/Struktur";
+import Galeri from "./pages/Galeri";
+import Produk from "./pages/Produk";
+import Pemira from "./pages/Pemira";
 import Formpemira from "./pages/formpemira";
 import Department from "./pages/department"
 
