@@ -74,11 +74,13 @@ export default function Department() {
       kadep: "Nama Kadep Psdm",
       desc: "Penjelasan departemen Psdm di sini...",
       prokers: [
-        { id: "psdm-p1", name: "Nama Proker Psdm 1", tgl: "-", desc: "-", status: "-" },
-        { id: "psdm-p2", name: "Nama Proker Psdm 2", tgl: "-", desc: "-", status: "-" },
-        { id: "psdm-p3", name: "Nama Proker Psdm 3", tgl: "-", desc: "-", status: "-" },
-        { id: "psdm-p4", name: "Nama Proker Psdm 4", tgl: "-" },
-        { id: "psdm-p5", name: "Nama Proker Psdm 5", tgl: "-", desc: "-", status: "-" },
+        { id: "psdm-p1", name: "HIMTIF Aktif belajar (AJAR)", tgl: "1 kali dalam sebulan", desc: "Program untuk mewadahi anggota sebegai pembekalan selama menjadi anggota HIMTIF, kegiatan ini dirancang untuk memberikan pemahaman kepada anggota tentang peran mereka di HIMTIF", status: "berjalan" },
+        { id: "psdm-p2", name: "HIMTIF Aktif Bersinergi (ASRI)", tgl: "1 Kali dalam sebulan", desc: "Program ini dibuat untuk memasukkan kegiatan olahraga ke dalam lingkungan organisasi, sehingga mendorong gaya hidup sehat dan mempererat persaudaraan dalam suasana yang ramah namun kompetitif", status: "berjalan" },
+        { id: "psdm-p3", name: "Malam Keakraban (Makrab)", tgl: "24 - 26 April 2026", desc: "Kegiatan ini diselenggarakan dengan tujuan utama untuk membangun solidaritas, chemistry, dan rasa kekeluargaan yang erat antar anggota", status: "Selesai" },
+        { id: "psdm-p4", name: "Pemilihan Raya (PEMIRA)", tgl: "Akan Datang", desc: "Kegiatan ini diselenggarakan sebagai sarana demokrasi di lingkungan HIMTIF dalam rangka pemilihan calon ketua dan wakil ketua umum untuk periode kepengurusan selanjutnya", status: "Akan Datang" },
+        { id: "psdm-p5", name: "Open Recruitment (OPREC)", tgl: "Akan Datang", desc: "Kegiatan yang diselenggarakan untuk mencari orang yang berbakat yang dapat membawa ide baru dan bekerja sama dengan baik untuk memajukan organisasi", status: "Akan Datang" },
+        { id: "psdm-p6", name: "Latihan Dasar Kepemimpinan Organisasi (LDKO)", tgl: "Akan Datang", desc: "Kegiatan ini dibuat untuk mewadahi dan melatih calon pemimpin yang profesional dan berintegritas, kegiatan ini dirancang untuk meningkatkan kemampuan kepemimpinan peserta", status: "Akan Datang" },
+        { id: "psdm-p5", name: "Konsultasi", tgl: "Setiap Hari", desc: "Kegiatan ini merupakan komitmen untuk terus memperbaiki komunikasi dan kerja sama antar anggota, denngan program ini setiap anggota dapat menyampaikan harapan, masalah dan ide mereka", status: "Berjalan" },        
       ],
     },
   ];

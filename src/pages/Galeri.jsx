@@ -30,7 +30,7 @@ export default function Galeri() {
     },
     {
       nama: "HIMTIF Ajar",
-      departemen: "PSDA",
+      departemen: "PSDM",
       tanggal: "Maret 2026",
       deskripsi: "HIMTIF berbagi kepada pondok pesantren.",
       gambar: ""
@@ -44,7 +44,7 @@ export default function Galeri() {
     },
     {
       nama: "Makrab",
-      departemen: "PSDA",
+      departemen: "PSDM",
       tanggal: "2025",
       deskripsi: "Malam keakraban.",
       gambar: ""
@@ -58,7 +58,7 @@ export default function Galeri() {
     },
     {
       nama: "HIMTIF Asri (Aktif Bersinergi)",
-      departemen: "PSDA",
+      departemen: "PSDM",
       tanggal: "2025",
       deskripsi: ".",
       gambar: ""
@@ -79,7 +79,7 @@ export default function Galeri() {
     },
   ];
 
-  const categories = ["Semua", "Ristek", "Humas", "Sosbud", "Minfo", "PSDA"];
+  const categories = ["Semua", "Ristek", "Humas", "Sosbud", "Minfo", "PSDM"];
 
   const filteredData = filter === "Semua" ? dataKegiatan : dataKegiatan.filter(item => item.departemen === filter);
 
