@@ -1,4 +1,17 @@
+# 1. Atur agar Netlify mengirimkan file JavaScript dengan tipe MIME yang benar
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+# 2. Pengaturan keamanan (CSP) yang sudah kita sesuaikan
 [[headers]]
   for = "/*"
   [headers.values]
     Content-Security-Policy = "default-src 'self' https://*.supabase.co; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.supabase.co;"
+
+# 3. Pengaturan routing khusus React/Vite agar halaman tidak blank saat di-refresh
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
