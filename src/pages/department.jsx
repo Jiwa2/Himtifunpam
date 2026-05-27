@@ -20,8 +20,8 @@ export default function Department() {
     {
       id: "ristek",
       name: "Department RISTEK",
-      kadep: "Nama Kadep Ristek",
-      desc: "Penjelasan departemen Ristek di sini...",
+      kadep: "Riset Dan Teknologi",
+      desc: "Departemen Ristek bertanggung jawab dalam pengembangan teknologi dan kebutuhan digital organisasi HIMTIF, termasuk pembuatan serta pengelolaan website. Selain itu, Ristek juga berperan dalam mengelola berbagai hal yang berkaitan dengan inovasi teknologi dan hal-hal yang relevan dengan program studi Teknik Informatika, agar mendukung aktivitas organisasi menjadi lebih efektif dan modern..",
       prokers: [
         { id: "ristek-p1", name: "Collab Himtif x HMTI UMJ", tgl: "-", desc: "-", status: "(Selesai)" },
         { id: "ristek-p2", name: "Hackaton", tgl: "13 - 18 Juni 2026", desc: "-", status: "(Akan Datang)" },
@@ -31,8 +31,8 @@ export default function Department() {
     {
       id: "humas",
       name: "Department HUMAS",
-      kadep: "Nama Kadep Humas",
-      desc: "Penjelasan departemen Humas di sini...",
+      kadep: "Hubungan Masyarakat",
+      desc: "Departemen Humas berperan sebagai penghubung antara HIMTIF dengan pihak luar. Humas menangani surat-menyurat, koordinasi kerja sama, serta komunikasi dengan organisasi atau pihak lain yang berkaitan dengan kegiatan HIMTIF. Departemen ini juga membantu memastikan hubungan eksternal organisasi tetap berjalan baik dan profesional",
       prokers: [
         { id: "humas-p1", name: "Nama Proker Humas 1", tgl: "-", desc: "-", status: "-" },
         { id: "humas-p2", name: "Nama Proker Humas 2", tgl: "-", desc: "-", status: "-" },
@@ -44,8 +44,8 @@ export default function Department() {
     {
       id: "minfo",
       name: "Department MINFO",
-      kadep: "Nama Kadep Minfo",
-      desc: "Penjelasan departemen Minfo di sini...",
+      kadep: "Media Informasi",
+      desc: "Departemen Minfo bertugas mengelola media sosial HIMTIF, membuat desain, serta menyusun konten publikasi. Seluruh tampilan dan informasi yang dibagikan melalui media sosial HIMTIF umumnya merupakan hasil kerja departemen ini. Minfo juga berperan dalam dokumentasi kegiatan agar setiap momen penting organisasi dapat tersampaikan dengan baik.",
       prokers: [
         { id: "minfo-p1", name: "Podcast Maha Suara 10", tgl: "18 April 2026", desc: "Podcast santai yang berisi sesi sharing dan pembahasan seputar perkuliahan dan organisasi", status: "Selesai" },
         { id: "minfo-p2", name: "Podcast Maha Suara 11", tgl: "20 Juni 2026", desc: "Podcast santai yang berisi sesi sharing dan pembahasan seputar perkuliahan dan organisasi", status: "Akan Datang" },
@@ -57,22 +57,22 @@ export default function Department() {
     {
       id: "sosbud",
       name: "Department SOSBUD",
-      kadep: "Nama Kadep Sosbud",
-      desc: "Penjelasan departemen Sosbud di sini...",
+      kadep: "Sosial Budaya Connect",
+      desc: "Departemen Sosbud Connect berfokus pada kegiatan sosial dan kepedulian terhadap lingkungan sekitar. Departemen ini menangani program seperti open donasi, kegiatan sosial, dan bentuk aksi kepedulian lainnya. Sosbud Connect juga pernah terlibat dalam penjualan lanyard dan kegiatan pendukung lain yang bertujuan mempererat kebersamaan serta memberikan manfaat bagi banyak pihak.",
       prokers: [
         { id: "sosbud-p1", name: "Buka Bersama (BUKBER)", tgl: "5 Maret 2026", desc: "Buka bersama HIMTIF yang bertujuan untuk mempererat tali silaturahmi dan menumbuhkan rasa kekeluargaan yang kuat antara seluruh anggota dan pengurus HIMTIF", status: "Selesai" },
         { id: "sosbud-p2", name: "Himtif Berbagi (HIMBER)", tgl: "13 Maret 2026", desc: "Program aksi sosial kemasyarakatan yang dirancang untuk meningkatkan rasa kepedulian, empati, dan kotribusi nyata mahasiswa terhadap masyarakat atau sosial", status: "Selesai" },
         { id: "sosbud-p3", name: "Himtif Production (HIMRPO)", tgl: "Setiap hari", desc: "Penjualan merchandise HIMTIF, seperti lanyard, stiker, pernak pernik dan makanan", status: "Berjalan" },
         { id: "sosbud-p4", name: "Dana Usaha (DANUSAN)", tgl: "Setiap Event", desc: "Kegiatan pencarian dana melalui penjualan produk atau makanan di event kampus, seperti PKKMB, Seminar, DLL", status: "Berjalan" },
         { id: "sosbud-p5", name: "Himtif Bussines Corner (HBC)", tgl: "September 2026", desc: "Program yang berfokus pada wadah edukasi dan juga berfungsi sebagai tempat pembelajaran bisnis bagi mahasiswa", status: "Akan Datang" },
-        { id: "sosbud-p5", name: "Donor Darah", tgl: "8 Oktober 2026", desc: "Aksi kemanusiaan kerja sama dengan PMI untuk membantu memenuhi stok kebutuhan darah dan meningkatkan kesadaran kesehatan mahasiswa serta masyarakat", status: "Akan Datang" }
+        { id: "sosbud-p6", name: "Donor Darah", tgl: "8 Oktober 2026", desc: "Aksi kemanusiaan kerja sama dengan PMI untuk membantu memenuhi stok kebutuhan darah dan meningkatkan kesadaran kesehatan mahasiswa serta masyarakat", status: "Akan Datang" }
       ],
     },
     {
       id: "psdm",
       name: "Department PSDM",
-      kadep: "Nama Kadep Psdm",
-      desc: "Penjelasan departemen Psdm di sini...",
+      kadep: "Pengembangan Sumber Daya Manusia",
+      desc: "Departemen PSDM bertugas mengelola dan memperhatikan perkembangan internal anggota HIMTIF. PSDM berperan dalam mengasah minat dan bakat internal HIMTIF, memantau keaktifan anggota dan pengurus, menjaga kenyamanan serta kekompakan dalam organisasi, dan menjadi tempat bagi anggota untuk menyampaikan keluh kesah atau masukan. Departemen ini berperan penting dalam menjaga hubungan internal agar tetap harmonis dan kondusif.",
       prokers: [
         { id: "psdm-p1", name: "HIMTIF Aktif belajar (AJAR)", tgl: "1 kali dalam sebulan", desc: "Program untuk mewadahi anggota sebegai pembekalan selama menjadi anggota HIMTIF, kegiatan ini dirancang untuk memberikan pemahaman kepada anggota tentang peran mereka di HIMTIF", status: "berjalan" },
         { id: "psdm-p2", name: "HIMTIF Aktif Bersinergi (ASRI)", tgl: "1 Kali dalam sebulan", desc: "Program ini dibuat untuk memasukkan kegiatan olahraga ke dalam lingkungan organisasi, sehingga mendorong gaya hidup sehat dan mempererat persaudaraan dalam suasana yang ramah namun kompetitif", status: "berjalan" },
@@ -80,7 +80,7 @@ export default function Department() {
         { id: "psdm-p4", name: "Pemilihan Raya (PEMIRA)", tgl: "Akan Datang", desc: "Kegiatan ini diselenggarakan sebagai sarana demokrasi di lingkungan HIMTIF dalam rangka pemilihan calon ketua dan wakil ketua umum untuk periode kepengurusan selanjutnya", status: "Akan Datang" },
         { id: "psdm-p5", name: "Open Recruitment (OPREC)", tgl: "Akan Datang", desc: "Kegiatan yang diselenggarakan untuk mencari orang yang berbakat yang dapat membawa ide baru dan bekerja sama dengan baik untuk memajukan organisasi", status: "Akan Datang" },
         { id: "psdm-p6", name: "Latihan Dasar Kepemimpinan Organisasi (LDKO)", tgl: "Akan Datang", desc: "Kegiatan ini dibuat untuk mewadahi dan melatih calon pemimpin yang profesional dan berintegritas, kegiatan ini dirancang untuk meningkatkan kemampuan kepemimpinan peserta", status: "Akan Datang" },
-        { id: "psdm-p5", name: "Konsultasi", tgl: "Setiap Hari", desc: "Kegiatan ini merupakan komitmen untuk terus memperbaiki komunikasi dan kerja sama antar anggota, denngan program ini setiap anggota dapat menyampaikan harapan, masalah dan ide mereka", status: "Berjalan" },        
+        { id: "psdm-p7", name: "Konsultasi", tgl: "Setiap Hari", desc: "Kegiatan ini merupakan komitmen untuk terus memperbaiki komunikasi dan kerja sama antar anggota, denngan program ini setiap anggota dapat menyampaikan harapan, masalah dan ide mereka", status: "Berjalan" },        
       ],
     },
   ];
