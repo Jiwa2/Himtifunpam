@@ -1,41 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { SiteLayout } from "../components/SiteLayout";
 import "./struktur.css";
 
 export default function Struktur() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div className="struktur-wrapper">
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <Link to="/">
-            <img src="/images/logohimtif.png" className="logo-img" />
-          </Link>
-          <button className="burger" onClick={() => setOpen(true)}>
-            ☰
-          </button>
-        </div>
-      </nav>
-
-      {open && (
-        <div className="sidebar-overlay" onClick={() => setOpen(false)}>
-          <div className="sidebar" onClick={(e) => e.stopPropagation()}>
-            <button className="close" onClick={() => setOpen(false)}>✕</button>
-            <Link to="/">Home</Link>
-            <Link to="/department">Department</Link>
-            <Link to="/galeri">Galeri</Link>
-            <Link to="/produk">Produk</Link>
-            <Link to="/pemira">Pemira</Link>
-          </div>
-        </div>
-      )}
-
-      <div className="container">
-        <h2 className="judul">BADAN PENGURUS HARIAN</h2>
+    <SiteLayout className="struktur-wrapper">
+      <div className="struktur-container">
+        <h1 className="judul">STRUKTUR ORGANISASI HIMTIF 2025/2026</h1>
         <div className="bph-grid">
           <Card nama="Saldy Saputra" jabatan="Ketua Umum" foto="/images/Saldy Saputra .png" />
           <Card nama="Fat Khudin" jabatan="Wakil Ketua Umum" foto="/images/himtif/Fat khudin.png" />
+        </div>
+        <h2 className="judul">BADAN PENGURUS HARIAN</h2>
+        <div className="bph-grid">
           <Card nama="Nurlayla Fitri" jabatan="Sekretaris Umum 1" foto="/images/himtif/Nurlayla fitri.png" />
           <Card nama="Aulia Putri" jabatan="Sekretaris Umum 2" foto="/images/himtif/Aulia Putri .png" />
           <Card nama="Medina Fikanti" jabatan="Bendahara Umum 1" foto="/images/himtif/Medina Fikanti.png" />
@@ -49,11 +25,9 @@ export default function Struktur() {
           <div className="pengurus-row">
             <Card nama="Muhammad Jiwa Islamutidar" jabatan="Kepala Department Ristek" foto="/images/ristek/Muhammad Jiwa Islamutidar.png" />
             <Card nama="Ahmad Renaldy" jabatan="Sekretaris Department" foto="/images/ristek/Ahmad Renaldy.png" />
+                        <Card nama="Abu Ziyad Al Katani" jabatan="Staff" foto="/images/ristek/Abu Ziyad Al Katani.png" />
             <Card nama="Mohammad Arief Ardiansyah" jabatan="Staff" foto="/images/ristek/Mohammad Arief Ardiansyah.png" />
             <Card nama="Cintya Laura Melagro" jabatan="Staff" foto="/images/ristek/Cintya Laura Melagro.png" />
-          </div>
-          <div className="pengurus-row">
-            <Card nama="Abu Ziyad Al Katani" jabatan="Staff" foto="/images/ristek/Abu Ziyad Al Katani.png" />
           </div>
         </div>
 
@@ -62,12 +36,12 @@ export default function Struktur() {
           <div className="pengurus-row">
             <Card nama="Arkananta Emier Pradipta" jabatan="Kepala Department Humas" foto="/images/humas/ARKANANTA EMIER PRADIPTA.png" />
             <Card nama="Zaydan Azfar" jabatan="Sekretaris Department" foto="/images/humas/ZAYDAN AZFAR.png" />
+            <Card nama="Muhammad Rafli Firdaus" jabatan="Staff" foto="/images/humas/MUHAMMAD RAFLI FIRDAUS.png" />
+            <Card nama="Paris Nurfadhillah" jabatan="Staff" foto="/images/humas/PARIS NURFADHILLAH.png" />
             <Card nama="Raven Firgiasyah" jabatan="Staff" foto="/images/humas/RAVEN FIRGIASYAH.png" />
             <Card nama="Sihabudin Firmansyah" jabatan="Staff" foto="/images/humas/SIHABUDIN FIRMANSYAH.png" />
           </div>
           <div className="pengurus-row">
-            <Card nama="Muhammad Rafli Firdaus" jabatan="Staff" foto="/images/humas/MUHAMMAD RAFLI FIRDAUS.png" />
-            <Card nama="Paris Nurfadhillah" jabatan="Staff" foto="/images/humas/PARIS NURFADHILLAH.png" />
           </div>
         </div>
 
@@ -78,8 +52,6 @@ export default function Struktur() {
             <Card nama="Lidya Septia Nita Darmawati" jabatan="Sekretaris Department" foto="/images/minfo/LIDYA SEPTIA NITA DARMAWATI.png" />
             <Card nama="Ika Auliya Rusyadah" jabatan="Staff" foto="/images/minfo/IKA AULIYA RUSYADAH.png" />
             <Card nama="Dita Adelia Putri" jabatan="Staff" foto="/images/minfo/DITA ADELIA PUTRI.png" />
-          </div>
-          <div className="pengurus-row">
             <Card nama="Olivia Ramadhani" jabatan="Staff" foto="/images/minfo/OLIVIA RAMADHANI.png" />
             <Card nama="Suci Oktaviani" jabatan="Staff" foto="/images/minfo/SUCI OKTAVIANI.png" />
           </div>
@@ -92,8 +64,6 @@ export default function Struktur() {
             <Card nama="Aldi Athalla Putra" jabatan="Sekretaris Department" foto="/images/sosbud/Aldi Athalla Putra.png" />
             <Card nama="Deden Jamaludin" jabatan="Staff" foto="/images/sosbud/26.png" />
             <Card nama="Amirul Mukminin" jabatan="Staff" foto="/images/sosbud/Amirul Mukminin.png" />
-          </div>
-          <div className="pengurus-row">
             <Card nama="Muhammad Edward" jabatan="Staff" foto="/images/sosbud/Muhamad Edward.png" />
             <Card nama="Ugem Zilullah" jabatan="Staff" foto="/images/sosbud/Ugem Zilullah.png" />
             <Card nama="Arinta Salsabilla" jabatan="Staff" foto="/images/sosbud/Arinta Salsabilla.png" />
@@ -187,16 +157,19 @@ export default function Struktur() {
           <Card nama="Trinancy Harinastiti" jabatan="Anggota" foto="/images/anggotapsdm/Trinancy Harinastiti.webp" />
         </div>
       </div>
-    </div>
+    </SiteLayout>
   );
 }
 
 function Card({ nama, jabatan, foto }) {
+  const src = foto && !foto.endsWith("/") && !foto.endsWith("---") ? foto : "/images/logohimtif.png";
+
   return (
     <div className="card-struktur">
-      <img src={foto} className="foto" />
+      <img src={src} alt={`Foto ${nama}`} className="struktur-foto" loading="lazy" />
       <h4>{nama}</h4>
       <p>{jabatan}</p>
     </div>
   );
 }
+

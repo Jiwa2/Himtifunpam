@@ -1,201 +1,140 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { SiteLayout } from "../components/SiteLayout";
 import { supabase } from "../supabaseClient";
 import "./formpemira.css";
 
-export default function Formpemira() {
-  const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-  
-  const [formData, setFormData] = useState({
-    nama: "",
-    nim: "",
-    kelas: "",
-    jabatan: "",
-    paslon: ""
-  });
+const initialFormData = {
+  nama: "",
+  nim: "",
+  kelas: "",
+  jabatan: "",
+  paslon: "",
+};
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+export default function Formpemira() {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleChange = (event) => {
+    setMessage(null);
+    setFormData((current) => ({
+      ...current,
+      [event.target.name]: event.target.value,
+    }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!formData.nama || !formData.nim || !formData.kelas || !formData.jabatan) {
-      alert("Silakan lengkapi data diri Anda terlebih dahulu!");
-      return;
-    }
-    if (!formData.paslon) {
-      alert("Silakan pilih salah satu pasangan calon (Paslon)!");
-      return;
-    }
-    
-    setLoading(true);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    const { data, error } = await supabase
-      .from("votes")
-      .insert([
-        {
-          nama: formData.nama,
-          nim: formData.nim,
-          kode_kelas: formData.kelas,
-          jabatan: formData.jabatan,
-          paslon: formData.paslon,
-        },
-      ]);
+    if (!formData.nama || !formData.nim || !formData.kelas || !formData.jabatan || !formData.paslon) {
+      setMessage({ type: "error", text: "Lengkapi data diri dan pilih salah satu paslon terlebih dahulu." });
+      return;
+    }
+
+    setLoading(true);
+    setMessage(null);
+
+    const { error } = await supabase.from("votes").insert([
+      {
+        nama: formData.nama,
+        nim: formData.nim,
+        kode_kelas: formData.kelas,
+        jabatan: formData.jabatan,
+        paslon: formData.paslon,
+      },
+    ]);
 
     setLoading(false);
 
     if (error) {
-      if (error.code === "23505") {
-        alert("⚠️ Gagal! NIM atau Kelas ini sudah terdaftar untuk memberikan suara.");
-      } else {
-        alert("Terjadi kesalahan sistem: " + error.message);
-      }
-    } else {
-      alert(`🎉 Berhasil! Terima kasih ${formData.nama}, suara Anda untuk posisi ${formData.jabatan} berhasil dikirim!`);
-      
-      setFormData({
-        nama: "",
-        nim: "",
-        kelas: "",
-        jabatan: "",
-        paslon: ""
+      setMessage({
+        type: "error",
+        text: error.code === "23505"
+          ? "NIM atau kelas ini sudah terdaftar untuk memberikan suara."
+          : `Terjadi kesalahan sistem: ${error.message}`,
       });
+      return;
     }
+
+    setMessage({ type: "success", text: `Terima kasih ${formData.nama}, suara Anda berhasil dikirim.` });
+    setFormData(initialFormData);
   };
 
   return (
-    <div className="formpemira-wrapper">
-      <div className="formpemira-container">
+    <SiteLayout className="formpemira-wrapper">
+      <section className="formpemira-container">
         <div className="formpemira-card">
-          
-          <div className="formpemira-navbar">
-            <Link to="/">
-              <img src="/images/logohimtif.png" alt="HIMTIF" className="logo-img" />
-            </Link>
-            <button className="burger" onClick={() => setOpen(true)}>☰</button>
+          <div className="formpemira-header">
+            <img src="/images/logohimtif.png" className="logo" alt="Logo HIMTIF" />
           </div>
 
-          {open && (
-            <div className="sidebar-overlay" onClick={() => setOpen(false)}>
-              <div className="sidebar" onClick={(e) => e.stopPropagation()}>
-                <button className="close" onClick={() => setOpen(false)}>✕</button>
-                <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-                <Link to="/struktur" onClick={() => setOpen(false)}>Struktur</Link>
-                <Link to="/galeri" onClick={() => setOpen(false)}>Galeri</Link>
-                <Link to="/produk" onClick={() => setOpen(false)}>Produk</Link>
-                <Link to="/pemira" onClick={() => setOpen(false)}>Pemira</Link>
-              </div>  
+          <h1 className="title">Form PEMIRA HIMTIF</h1>
+          <p className="desc">Silakan isi data diri dan pilih pasangan calon.</p>
+
+          {message && (
+            <div className={`form-message ${message.type}`} role="status">
+              {message.text}
             </div>
           )}
 
-          <div className="formpemira-header">
-            <img src="/images/logohimtif.png" className="logo" alt="logo" />
-          </div>
-
-          <h2 className="title">FORM PEMIRA HIMTIF</h2>
-          <p className="desc">Silakan isi data diri dan pilih pasangan calon.</p>
-
           <form className="form" onSubmit={handleSubmit}>
             <div className="input-group">
-              <label>Nama</label>
-              <input
-                type="text"
-                name="nama"
-                value={formData.nama}
-                onChange={handleChange}
-                placeholder="Masukkan nama"
-                required
-              />
+              <label htmlFor="nama">Nama</label>
+              <input id="nama" type="text" name="nama" value={formData.nama} onChange={handleChange} placeholder="Masukkan nama" required />
             </div>
 
             <div className="input-group">
-              <label>NIM</label>
-              <input
-                type="text"
-                name="nim"
-                value={formData.nim}
-                onChange={handleChange}
-                placeholder="Masukkan NIM"
-                required
-              />
+              <label htmlFor="nim">NIM</label>
+              <input id="nim" type="text" name="nim" value={formData.nim} onChange={handleChange} placeholder="Masukkan NIM" required />
             </div>
 
             <div className="input-group">
-              <label>Kelas</label>
-              <input
-                type="text"
-                name="kelas"
-                value={formData.kelas}
-                onChange={handleChange}
-                placeholder="Masukkan kelas"
-                required
-              />
+              <label htmlFor="kelas">Kelas</label>
+              <input id="kelas" type="text" name="kelas" value={formData.kelas} onChange={handleChange} placeholder="Contoh: 06TPLP001" required />
             </div>
 
             <div className="input-group">
-              <label>Jabatan</label>
-              <select 
-                name="jabatan"
-                value={formData.jabatan} 
-                onChange={handleChange}
-                required
-                style={{ cursor: 'pointer' }}
-              >
-                <option value="" disabled hidden>Masukkan jabatan</option>
+              <label htmlFor="jabatan">Jabatan</label>
+              <select id="jabatan" name="jabatan" value={formData.jabatan} onChange={handleChange} required>
+                <option value="" disabled>Pilih jabatan</option>
                 <option value="Ketua Kelas">Ketua Kelas</option>
                 <option value="Wakil Kelas">Wakil Kelas</option>
               </select>
             </div>
 
-            <h3 className="pilihan-title">Pilih Paslon</h3>
+            <h2 className="pilihan-title">Pilih Paslon</h2>
 
             <div className="paslon-container">
-              <label className="paslon-card">
-                <input
-                  type="radio"
-                  name="paslon"
-                  value="1"
-                  checked={formData.paslon === "1"}
-                  onChange={handleChange}
-                  hidden
-                />
-                <div className="paslon-header">Paslon 1</div>
-                <div className="paslon-form-content">
-                  <div className="calon"><img src="/images/user.png" alt="Ketua" className="foto" /><p>Ketua</p></div>
-                  <div className="calon"><img src="/images/user.png" alt="Wakil" className="foto" /><p>Wakil</p></div>
-                </div>
-              </label>
-
-              <label className="paslon-card">
-                <input
-                  type="radio"
-                  name="paslon"
-                  value="2"
-                  checked={formData.paslon === "2"}
-                  onChange={handleChange}
-                  hidden
-                />
-                <div className="paslon-header">Paslon 2</div>
-                <div className="paslon-form-content">
-                  <div className="calon"><img src="/images/user.png" alt="Ketua" className="foto" /><p>Ketua</p></div>
-                  <div className="calon"><img src="/images/user.png" alt="Wakil" className="foto" /><p>Wakil</p></div>
-                </div>
-              </label>
+              <PaslonOption id="1" checked={formData.paslon === "1"} onChange={handleChange} />
+              <PaslonOption id="2" checked={formData.paslon === "2"} onChange={handleChange} />
             </div>
 
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Mengirim Pilihan..." : "Kirim Pilihan"}
             </button>
           </form>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
 
+function PaslonOption({ id, checked, onChange }) {
+  return (
+    <label className="paslon-card">
+      <input type="radio" name="paslon" value={id} checked={checked} onChange={onChange} />
+      <div className="paslon-header">Paslon {id}</div>
+      <div className="paslon-form-content">
+        <div className="calon">
+          <img src="/images/logohimtif.png" alt={`Ketua paslon ${id}`} className="foto" loading="lazy" />
+          <p>Ketua</p>
+        </div>
+        <div className="calon">
+          <img src="/images/logohimtif.png" alt={`Wakil paslon ${id}`} className="foto" loading="lazy" />
+          <p>Wakil</p>
         </div>
       </div>
-    </div>
+    </label>
   );
 }

@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { SiteLayout } from "../components/SiteLayout";
 import "./department.css";
 
 export default function Department() {
-  const [open, setOpen] = useState(false);
-
   const [openDept, setOpenDept] = useState({});
   const [openProker, setOpenProker] = useState({});
 
@@ -86,34 +84,7 @@ export default function Department() {
   ];
 
   return (
-    <div className="department-wrapper">
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <Link to="/" className="navbar-logo-link">
-            <img src="/images/logohimtif.png" className="logo-img" alt="Logo HIMTIF" />
-          </Link>
-          <button className="burger" onClick={() => setOpen(true)}>
-            ☰
-          </button>
-        </div>
-      </nav>
-
-      {/* SIDEBAR OVERLAY */}
-      {open && (
-        <div className="sidebar-overlay" onClick={() => setOpen(false)}>
-          <div className="sidebar" onClick={(e) => e.stopPropagation()}>
-            <button className="close" onClick={() => setOpen(false)}>✕</button>
-            <Link to="/">Home</Link>
-            <Link to="/department">Department</Link>
-            <Link to="/galeri">Galeri</Link>
-            <Link to="/produk">Produk</Link>
-            <Link to="/pemira">Pemira</Link>
-          </div>
-        </div>
-      )}
-
-      {/* MAIN CONTAINER */}
+    <SiteLayout className="department-wrapper">
       <div className="department-container">
         <div className="department-header-text">
           <h2 className="judul-halaman">Ada Departemen apa aja sih di HIMTIF?</h2>
@@ -197,6 +168,8 @@ export default function Department() {
         </div>
 
       </div>
-    </div>
+    </SiteLayout>
   );
 }
+
+

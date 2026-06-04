@@ -1,91 +1,32 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { SiteLayout } from "../components/SiteLayout";
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const [closing, setClosing] = useState(false);
-
-  const handleClose = () => {
-    setClosing(true);
-    setTimeout(() => {
-      setOpen(false);
-      setClosing(false);
-    }, 300);
-  };
-
   return (
-    <div className="home-wrapper">
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <img
-            src="/images/logohimtif.png"
-            alt="HIMTIF"
-            className="navbar-logo"
-          />
-          
-          {/* Menu Desktop: Otomatis sembunyi di mobile (hidden), muncul di desktop (md:flex) */}
-          <ul className="navbar-menu hidden md:flex">
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#visi">Visi</a></li>
-            <li><a href="#filosofi">Filosofi</a></li>
-          </ul>
-
-          {/* Tombol Burger Mobile: Otomatis muncul di mobile (block), sembunyi di desktop (md:hidden) */}
-          <button 
-            type="button"
-            className="burger-btn block md:hidden"
-            onClick={() => setOpen(true)}
-            aria-label="Open Menu"
-          >
-            ☰
-          </button>
-        </div>
-      </nav>
-
-      {/* SIDEBAR MOBILE OVERLAY */}
-      {open && (
-        <div
-          className={`sidebar-overlay ${closing ? "closing" : ""}`}
-          onClick={handleClose}
-        >
-          <div className="sidebar" onClick={(e) => e.stopPropagation()}>
-            <button type="button" className="close-btn" onClick={handleClose}>
-              ✕
-            </button>
-            <Link to="/struktur" onClick={handleClose}>Struktur Organisasi</Link>
-            <Link to="/galeri" onClick={handleClose}>Galeri Proker</Link>
-            <Link to="/produk" onClick={handleClose}>Produk HIMTIF</Link>
-            <Link to="/pemira" onClick={handleClose}>Pemira</Link>
-            <Link to="/department" onClick={handleClose}>Department</Link>
-          </div>
-        </div>
-      )}
-
-      {/* SECTION HERO */}
+    <SiteLayout footer className="home-wrapper">
       <section id="beranda" className="hero">
-        <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>Selamat datang di</h1>
-          <p>Website Himpunan Mahasiswa Teknik Informatika</p>
+          <h1>HIMTIF Universitas Pamulang</h1>
+          <p>Website resmi Himpunan Mahasiswa Teknik Informatika untuk informasi organisasi, program kerja, dan kegiatan mahasiswa.</p>
+          <div className="hero-actions">
+            <Link className="btn-primary" to="/department">Lihat Department</Link>
+            <Link className="btn-secondary" to="/struktur">Struktur Organisasi</Link>
+          </div>
         </div>
       </section>
 
-      {/* SECTION TENTANG */}
-      <section id="tentang" className="tentang">
-        <div className="container">
-          <h2>Tentang HIMTIF</h2>
-          <div className="line-dec"></div>
+      <section id="tentang" className="page-section tentang">
+        <div className="section-container">
+          <h2 className="section-title">Tentang HIMTIF</h2>
+          <div className="section-kicker"></div>
           <p className="desc-text">
             Himpunan Mahasiswa Teknik Informatika (HIMTIF) adalah organisasi kemahasiswaan yang mewadahi aspirasi, pengembangan, dan kolaborasi mahasiswa Teknik Informatika. Kami berfokus pada peningkatan kompetensi akademik, soft skills, serta networking melalui berbagai program edukatif, pelatihan, dan kegiatan sosial.
           </p>
         </div>
       </section>
 
-      {/* SECTION VISI MISI */}
-      <section id="visi" className="visi">
-        <div className="container">
+      <section id="visi" className="page-section visi">
+        <div className="section-container">
           <div className="visi-misi-grid">
             <div className="visi-box">
               <h2>Visi</h2>
@@ -94,7 +35,7 @@ export default function Home() {
                 Mewujudkan HIMTIF yang tertata, responsif, dan berdampak melalui penguatan tata kelola organisasi, peningkatan efektivitas program kerja, serta pemenuhan kebutuhan anggota secara berkelanjutan.
               </p>
             </div>
-            
+
             <div className="misi-box">
               <h2>Misi</h2>
               <div className="line-dec left"></div>
@@ -111,11 +52,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION FILOSOFI */}
-      <section id="filosofi" className="filosofi">
-        <div className="container filosofi-wrapper">
-          <h2 className="filosofi-title">Filosofi Lambang HIMTIF</h2>
-          <div className="line-dec"></div>
+      <section id="filosofi" className="page-section filosofi">
+        <div className="section-container filosofi-wrapper">
+          <h2 className="section-title">Filosofi Lambang HIMTIF</h2>
+          <div className="section-kicker"></div>
 
           <div className="filosofi-content">
             <div className="filosofi-logo">
@@ -123,63 +63,20 @@ export default function Home() {
             </div>
 
             <div className="filosofi-text">
-              <h4>Tiga Lingkaran :</h4>
-              <p>
-                Melambangkan Tri Dharma Perguruan Tinggi (Pendidikan, Penelitian, dan Pengabdian).
-              </p>
+              <h4>Tiga Lingkaran</h4>
+              <p>Melambangkan Tri Dharma Perguruan Tinggi: pendidikan, penelitian, dan pengabdian.</p>
 
-              <h4>Arti Warna :</h4>
+              <h4>Arti Warna</h4>
               <ul className="warna-list">
-                <li><b style={{color:"#1e3a8a"}}>Biru :</b> Kepercayaan dan ketenangan atau mencerminkan HIMTIF yang profesional dan tidak anarkis.</li>
-                <li><b style={{color:"#16a34a"}}>Hijau :</b> Kebaikan dan kesehatan, menggambarkan gerakan organisasi yang positif.</li>
-                <li><b style={{color:"#eab308"}}>Kuning :</b> Kejayaan dan semangat, melambangkan semangat menuju kemajuan.</li>
-                <li><b style={{color:"#dc2626"}}>Merah :</b> Keberanian, menunjukan kemampuan berpikir dan bertindak untuk mencapai tujuan.</li>
+                <li><b style={{ color: "var(--color-primary)" }}>Biru:</b> Kepercayaan dan ketenangan, mencerminkan HIMTIF yang profesional.</li>
+                <li><b style={{ color: "#7D5A50" }}>Hijau:</b> Kebaikan dan kesehatan, menggambarkan gerakan organisasi yang positif.</li>
+                <li><b style={{ color: "#A78F79" }}>Kuning:</b> Kejayaan dan semangat menuju kemajuan.</li>
+                <li><b style={{ color: "#4B2E2A" }}>Merah:</b> Keberanian dalam berpikir dan bertindak untuk mencapai tujuan.</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-left">
-            <div className="footer-logo">
-              <img src="/images/logohimtif.png" alt="logo" />
-              <div>
-                <h3>Himpunan Teknik Informatika</h3>
-                <p><i>Universitas Pamulang</i></p>
-              </div>
-            </div>
-            <div className="footer-icons">
-              <img src="/images/tiktok.avif" alt="tiktok" />
-              <img src="/images/instagram.png" alt="instagram" />
-              <img src="/images/email.png" alt="email" />
-              <img src="/images/youtube.png" alt="youtube" />
-            </div>
-          </div>
-
-          <div className="footer-center">
-            <h3>Alamat Sekretariat</h3>
-            <p>
-              Jl. Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan, Banten 15310
-            </p>
-          </div>
-
-          <div className="footer-right">
-            <h3>Navigasi</h3>
-            <ul>
-              <li><a href="#beranda">Beranda</a></li>
-              <li><a href="#tentang">Tentang Himtif</a></li>
-              <li><a href="#filosofi">Kontak Kami</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          &copy; 2026 HIMTIF UNPAM - Ristek Division
-        </div>
-      </footer>
-    </div>
+    </SiteLayout>
   );
 }

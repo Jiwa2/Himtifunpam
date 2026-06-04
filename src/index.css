@@ -1,520 +1,284 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --color-bg: #fff7ed;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ffedd5;
+  --color-primary: #4B2E2A;
+  --color-primary-soft: #dbeafe;
+  --color-accent: #d4a373;
+  --color-accent-dark: #a76833;
+  --color-text: #1f2937;
+  --color-muted: #64748b;
+  --color-border: rgba(31, 41, 55, 0.12);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 8px 24px rgba(17, 24, 39, 0.08);
+  --shadow-lg: 0 20px 50px rgba(17, 24, 39, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    background-color: #FFE0B2;
-    color: #333;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.route-loader {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  font-weight: 900;
+}
+
+.page-section {
+  padding: 84px 20px;
+}
+
+.section-container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  line-height: 1.18;
+  font-weight: 850;
+  text-align: center;
+}
+
+.section-kicker {
+  width: 64px;
+  height: 4px;
+  margin: 18px auto 30px;
+  border-radius: 999px;
+  background: var(--color-accent);
 }
 
 .home-wrapper {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.line-dec {
-    width: 60px;
-    height: 4px;
-    background: #c79a6b;
-    margin: 15px auto 30px auto;
-    border-radius: 2px;
-}
-
-.line-dec.left {
-    margin: 15px 0 25px 0;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 70px;
-    background: #D3A376;
-    z-index: 9999 !important;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
-}
-
-.navbar-inner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.navbar-logo {
-    height: 45px;
-    width: auto;
-}
-
-.navbar-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.navbar-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    padding: 8px 4px;
-    position: relative;
-}
-
-.navbar-menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transition: width 0.3s ease;
-}
-
-.navbar-menu li a:hover::after {
-    width: 100%;
-}
-
-.burger-btn {
-    display: block !important;
-    font-size: 32px;
-    background: transparent !important;
-    border: none !important;
-    color: white !important;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    padding: 4px;
-    line-height: 1;
-    z-index: 10000 !important;
-}
-
-.burger-btn:hover {
-    transform: scale(1.1);
+  width: 100%;
 }
 
 .hero {
-    height: 100vh;
-    min-height: 500px;
-    background-image: url("/images/background.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
-    z-index: 1;
+  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 72px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.34)), url("/images/background.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
-    position: relative;
-    color: white;
-    text-align: center;
-    z-index: 2;
-    padding: 0 24px;
-    max-width: 800px;
+  width: min(920px, calc(100% - 32px));
+  color: #fff;
+  text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    line-height: 1.2;
+  margin: 0 0 16px;
+  font-size: clamp(2.35rem, 6vw, 5rem);
+  line-height: 1.04;
+  font-weight: 900;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    opacity: 0.95;
-    line-height: 1.4;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
 }
 
-.container {
-    max-width: 1140px;
-    margin: auto;
-    padding: 80px 20px;
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.28);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
 }
 
 .tentang {
-    background: linear-gradient(to bottom, #D3A376, #FFE0B2);
-    text-align: center;
-}
-
-.tentang h2, .visi h2, .filosofi-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #2b2b2b;
+  background: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+  text-align: center;
 }
 
 .desc-text {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    max-width: 850px;
-    margin: 0 auto;
-    color: #444;
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.85;
 }
 
 .visi {
-    background: #FFE0B2;
+  background: #fff;
 }
 
 .visi-misi-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
-    text-align: left;
-    align-items: start;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: start;
 }
 
-.visi-box, .misi-box {
-    background: rgba(255, 255, 255, 0.45);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(211, 163, 118, 0.15);
-    border: 1px solid rgba(255,255,255,0.6);
+.visi-box,
+.misi-box,
+.filosofi-text {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-.visi-box h2, .misi-box h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
+.visi-box,
+.misi-box {
+  padding: clamp(24px, 4vw, 38px);
 }
 
-.visi-box p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #444;
+.visi-box h2,
+.misi-box h2 {
+  margin: 0;
+  font-size: 1.55rem;
 }
 
-.misi-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.line-dec.left {
+  width: 52px;
+  height: 4px;
+  margin: 14px 0 22px;
+  border-radius: 999px;
+  background: var(--color-accent);
+}
+
+.visi-box p,
+.misi-box li,
+.filosofi-text p,
+.warna-list li {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.misi-box ul,
+.warna-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .misi-box li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-size: 1rem;
-    color: #444;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
 }
 
 .misi-box li::before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #c79a6b;
-    font-weight: bold;
-    font-size: 1.2rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-primary);
 }
 
 .filosofi {
-    background: #FFE0B2;
-    text-align: center;
+  background: var(--color-bg);
 }
 
 .filosofi-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    margin-top: 40px;
-    text-align: left;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
 }
 
 .filosofi-logo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: center;
 }
 
 .filosofi-logo img {
-    max-width: 280px;
-    height: auto;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  width: min(280px, 70vw);
+  filter: drop-shadow(0 18px 24px rgba(17, 24, 39, 0.14));
 }
 
 .filosofi-text {
-    flex: 1.2;
-    background: rgba(255, 255, 255, 0.45);
-    padding: 35px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.6);
+  padding: clamp(24px, 4vw, 36px);
 }
 
 .filosofi-text h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    color: #222;
+  margin: 18px 0 8px;
+  font-size: 1.1rem;
 }
 
-.filosofi-text p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 15px;
+.warna-list li + li {
+  margin-top: 8px;
 }
 
-.warna-list {
-    list-style: none;
-    padding: 0;
-}
+@media (max-width: 860px) {
+  .page-section {
+    padding: 58px 16px;
+  }
 
-.warna-list li {
-    margin-bottom: 8px;
-    font-size: 1.05rem;
-}
+  .visi-misi-grid,
+  .filosofi-content {
+    grid-template-columns: 1fr;
+  }
 
-.sidebar-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99999 !important;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.sidebar {
-    width: 280px;
-    height: 100%;
-    background: #D3A376;
-    display: flex;
-    flex-direction: column;
-    padding: 30px 24px;
-    gap: 22px;
-    box-sizing: border-box;
-    box-shadow: -4px 0 15px rgba(0,0,0,0.2);
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: all 0.2s ease;
-}
-
-.sidebar a:hover {
-    padding-left: 8px;
-    opacity: 0.8;
-}
-
-.close-btn {
-    align-self: flex-end;
-    background: none;
-    border: none;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: transform 0.2s ease;
-}
-
-.close-btn:hover {
-    transform: rotate(90deg);
-}
-
-.sidebar-overlay { animation: fadeIn 0.3s ease; }
-.sidebar-overlay.closing { animation: fadeOut 0.3s ease forwards; }
-.sidebar { transform: translateX(100%); animation: slideIn 0.3s forwards; }
-.sidebar-overlay.closing .sidebar { animation: slideOut 0.3s forwards; }
-
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
-@keyframes slideIn { to { transform: translateX(0); } }
-@keyframes slideOut { from { transform: translateX(0); } to { transform: translateX(100%); } }
-
-.footer {
-    background-color: #d9b38c;
-    width: 100%;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 35px 20px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 0.8fr;
-    gap: 30px;
+  .filosofi-text {
     text-align: left;
-}
-
-.footer-left .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.footer-left .footer-logo h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.footer-left .footer-logo img {
-    width: 45px;
-    height: auto;
-}
-
-.footer-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.footer-icons img {
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.footer-icons img:hover {
-    transform: translateY(-3px);
-}
-
-.footer-center h3, .footer-right h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.footer-center p {
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: 0.85;
-}
-
-.footer-right ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-right li {
-    margin-bottom: 8px;
-}
-
-.footer-right a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.85;
-    transition: opacity 0.2s;
-}
-
-.footer-right a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    background-color: #c79a6b;
-    text-align: center;
-    padding: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media (max-width: 992px) {
-    .visi-misi-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .filosofi-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    .filosofi-logo {
-        justify-content: center;
-    }
-    .filosofi-text {
-        text-align: left;
-    }
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-menu {
-        display: none !important;
-    }
-
-    .navbar-inner {
-        padding: 0 20px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
-
-    .hero-content h1 {
-        font-size: 2.1rem;
-    }
-
-    .hero-content p {
-        font-size: 1.05rem;
-        padding: 0 10px;
-    }
-
-    .container {
-        padding: 50px 15px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 30px 15px;
-        text-align: center;
-    }
-
-    .footer-left .footer-logo {
-        justify-content: center;
-        text-align: left;
-    }
-
-    .footer-icons {
-        justify-content: center;
-    }
+  }
 }

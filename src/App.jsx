@@ -1,23 +1,26 @@
-import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Struktur from "./pages/Struktur";
-import Galeri from "./pages/Galeri";
-import Produk from "./pages/Produk";
-import Pemira from "./pages/Pemira";
-import Formpemira from "./pages/formpemira";
-import Department from "./pages/department"
+const Home = lazy(() => import("./pages/Home"));
+const Struktur = lazy(() => import("./pages/Struktur"));
+const Galeri = lazy(() => import("./pages/Galeri"));
+const Produk = lazy(() => import("./pages/Produk"));
+const Pemira = lazy(() => import("./pages/Pemira"));
+const Formpemira = lazy(() => import("./pages/formpemira"));
+const Department = lazy(() => import("./pages/department"));
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/struktur" element={<Struktur />} />
-      <Route path="/galeri" element={<Galeri />} />
-      <Route path="/produk" element={<Produk />} />
-      <Route path="/pemira" element={<Pemira />} />
-      <Route path="/Formpemira" element={<Formpemira />} />
-      <Route path="/department" element={<Department />} />
-    </Routes>
+    <Suspense fallback={<div className="route-loader">Memuat halaman...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/struktur" element={<Struktur />} />
+        <Route path="/galeri" element={<Galeri />} />
+        <Route path="/produk" element={<Produk />} />
+        <Route path="/pemira" element={<Pemira />} />
+        <Route path="/Formpemira" element={<Formpemira />} />
+        <Route path="/department" element={<Department />} />
+      </Routes>
+    </Suspense>
   );
 }
