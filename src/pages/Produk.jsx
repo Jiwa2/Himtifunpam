@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SiteLayout } from "../components/siteLayout";
+import { SiteLayout } from "../components/SiteLayout";
 import { FaWhatsapp, FaTags, FaShoppingBag } from "react-icons/fa";
 import "./Produk.css";
 
