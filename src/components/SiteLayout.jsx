@@ -48,25 +48,32 @@ export function SiteLayout({ children, footer = false, className = "" }) {
         </nav>
       </header>
 
-      {open && (
-        <div className="site-drawer-backdrop" onClick={() => setOpen(false)}>
-          <aside className="site-drawer" onClick={(event) => event.stopPropagation()} aria-label="Menu navigasi">
-            <button
-              type="button"
-              className="site-drawer-close"
-              onClick={() => setOpen(false)}
-              aria-label="Tutup menu navigasi"
-            >
-              <FaTimes aria-hidden="true" />
-            </button>
-            {navItems.map((item) => (
-              <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)}>
-                {item.label}
-              </NavLink>
-            ))}
-          </aside>
-        </div>
-      )}
+      {/* FIXED: Menggunakan class 'is-open' untuk trigger animasi CSS smooth */}
+      <div 
+        className={`site-drawer-backdrop ${open ? "is-open" : ""}`} 
+        onClick={() => setOpen(false)}
+      >
+        <aside 
+          className={`site-drawer ${open ? "is-open" : ""}`} 
+          onClick={(event) => event.stopPropagation()} 
+          aria-label="Menu navigasi"
+        >
+          <button
+            type="button"
+            className="site-drawer-close"
+            onClick={() => setOpen(false)}
+            aria-label="Tutup menu navigasi"
+          >
+            <FaTimes aria-hidden="true" />
+          </button>
+          
+          {navItems.map((item) => (
+            <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)}>
+              {item.label}
+            </NavLink>
+          ))}
+        </aside>
+      </div>
 
       <main>{children}</main>
 

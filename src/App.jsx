@@ -9,6 +9,7 @@ const Pemira = lazy(() => import("./pages/Pemira"));
 const Formpemira = lazy(() => import("./pages/formpemira"));
 const Department = lazy(() => import("./pages/department"));
 
+
 export default function App() {
   return (
     <Suspense fallback={<div className="route-loader">Memuat halaman...</div>}>
@@ -18,7 +19,7 @@ export default function App() {
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/produk" element={<Produk />} />
         <Route path="/pemira" element={<Pemira />} />
-        <Route path="/Formpemira" element={<Formpemira />} />
+        <Route path="/formpemira" element={<Formpemira />} />
         <Route path="/department" element={<Department />} />
       </Routes>
     </Suspense>

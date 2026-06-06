@@ -61,7 +61,7 @@ export default function Pemira() {
 
         <div className="cta">
           <p>Gunakan hak pilihmu dan ikut berpartisipasi dalam Pemira.</p>
-          <Link to="/Formpemira" className="cta-btn">Tentukan Pilihanmu Sekarang</Link>
+          <Link to="/formpemira" className="cta-btn">Tentukan Pilihanmu Sekarang</Link>
         </div>
       </section>
     </SiteLayout>
