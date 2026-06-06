@@ -47,14 +47,14 @@ export default function Produk() {
 
   const handleBeli = (namaProduk) => {
     const pesan = `Halo Admin HIMTIF Store, saya tertarik untuk memesan produk: ${namaProduk}. Apakah slot masih tersedia?`;
-    const url = `https://wa.me/62 81296345031?text=${encodeURIComponent(pesan)}`;
+    const url = `https://wa.me/6281296345031?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
   };
 
   return (
     <SiteLayout className="produk-shell" footer={true}>
       <div className="produk-wrapper">
-        
+
         <div className="produk-hero">
           <div className="produk-hero-content">
             <span className="hero-tag">HIMTIF OFFICIAL STORE</span>
@@ -77,7 +77,7 @@ export default function Produk() {
                 <span className={`produk-status-tag ${produk.status.toLowerCase().replace(" ", "-")}`}>{produk.status}</span>
                 <img src={produk.gambar} alt={produk.nama} />
               </div>
-              
+
               <div className="produk-info">
                 <span className="produk-category-label">
                   <FaTags /> {produk.kategori}

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 const Home = lazy(() => import("./pages/Home"));
 const Struktur = lazy(() => import("./pages/Struktur"));
@@ -23,6 +24,11 @@ export default function App() {
         <Route path="/formpemira" element={<Formpemira />} />
         <Route path="/department" element={<Department />} />
         <Route path="/kotaksaran" element={<KotakSaran />} />
+        <Route path="/formpemira" element={
+          <ErrorBoundary>
+            <Formpemira />
+          </ErrorBoundary>
+        } />
       </Routes>
     </Suspense>
   );
