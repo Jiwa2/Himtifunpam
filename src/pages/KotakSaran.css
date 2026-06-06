@@ -1,0 +1,224 @@
+.saran-shell {
+  background-color: #f7f9fa;
+  min-height: 100vh;
+}
+
+.saran-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ffeacc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.saran-banner {
+  background: linear-gradient(135deg, #dfbc8c 0%, #f1d7b1 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(223, 188, 140, 0.3);
+  margin-bottom: 30px;
+}
+
+.saran-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.saran-logo {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+}
+
+.saran-banner-text {
+  flex: 1;
+}
+
+.saran-banner-text h1 {
+  font-size: 28px;
+  color: #332615;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.saran-line-dots {
+  width: 60px;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, #332615, #332615 4px, transparent 4px, transparent 8px);
+  margin-bottom: 15px;
+}
+
+.saran-banner-text p {
+  color: #54432d;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.saran-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: #42321c;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.saran-content {
+  display: flex;
+  gap: 40px;
+  padding: 20px 10px;
+}
+
+.saran-left {
+  flex: 1;
+}
+
+.saran-left-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.saran-left-title .check-icon {
+  color: #54432d;
+  font-size: 20px;
+}
+
+.saran-left-title h2 {
+  font-size: 22px;
+  color: #332615;
+  margin: 0;
+  font-weight: 700;
+}
+
+.saran-left p {
+  color: #54432d;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.saran-right {
+  flex: 1.2;
+  position: relative;
+}
+
+.saran-right::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(180deg, transparent, transparent 4px, #bc9f77 4px, #bc9f77 8px);
+}
+
+.saran-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.saran-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saran-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #332615;
+}
+
+.saran-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.saran-input-wrapper input,
+.saran-input-wrapper textarea {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #f3d8b4 0%, #e7c699 100%);
+  font-size: 14px;
+  color: #332615;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.saran-input-wrapper textarea {
+  resize: none;
+}
+
+.saran-input-wrapper input::placeholder,
+.saran-input-wrapper textarea::placeholder {
+  color: #7d6548;
+}
+
+.saran-input-wrapper input:focus,
+.saran-input-wrapper textarea:focus {
+  box-shadow: 0 0 0 2px #bc9f77;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: #614e36;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.textarea-icon {
+  top: 15px;
+}
+
+.saran-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 14px;
+  border: 1px solid #7a603d;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #b4946a 0%, #947750 100%);
+  color: #ffeacc;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.saran-submit-btn:hover {
+  background: linear-gradient(to bottom, #a08157 0%, #836742 100%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .saran-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .saran-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .saran-right::before {
+    display: none;
+  }
+}

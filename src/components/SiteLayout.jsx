@@ -10,6 +10,7 @@ const navItems = [
   { label: "Galeri", to: "/galeri" },
   { label: "Produk", to: "/produk" },
   { label: "Pemira", to: "/pemira" },
+  { label: "Kotak Saran", to: "/KotakSaran" },
 ];
 
 export function SiteLayout({ children, footer = false, className = "" }) {

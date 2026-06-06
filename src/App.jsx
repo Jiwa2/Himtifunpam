@@ -8,6 +8,7 @@ const Produk = lazy(() => import("./pages/Produk"));
 const Pemira = lazy(() => import("./pages/Pemira"));
 const Formpemira = lazy(() => import("./pages/formpemira"));
 const Department = lazy(() => import("./pages/department"));
+const KotakSaran = lazy(() => import("./pages/KotakSaran"));
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/pemira" element={<Pemira />} />
         <Route path="/formpemira" element={<Formpemira />} />
         <Route path="/department" element={<Department />} />
+        <Route path="/kotaksaran" element={<KotakSaran />} />
       </Routes>
     </Suspense>
   );
