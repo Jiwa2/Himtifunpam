@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SiteLayout } from "../components/siteLayout";
+import { SiteLayout } from "../components/SiteLayout";
 import { FaUser, FaEnvelope, FaPen, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
 import "./KotakSaran.css";
 
