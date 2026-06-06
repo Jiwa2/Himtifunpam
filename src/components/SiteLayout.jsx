@@ -126,7 +126,7 @@ export function SiteFooter() {
           </div>
         </section>
       </div>
-      <div className="site-footer-bottom">Copyright 2026 HIMTIF UNPAM - Ristek Division</div>
+      <div className="site-footer-bottom">Copyright 2026 HIMTIF UNPAM - Department Ristek</div>
     </footer>
   );
 }

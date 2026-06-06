@@ -47,7 +47,7 @@ export default function Produk() {
 
   const handleBeli = (namaProduk) => {
     const pesan = `Halo Admin HIMTIF Store, saya tertarik untuk memesan produk: ${namaProduk}. Apakah slot masih tersedia?`;
-    const url = `https://wa.me/6281234567890?text=${encodeURIComponent(pesan)}`;
+    const url = `https://wa.me/62 81296345031?text=${encodeURIComponent(pesan)}`;
     window.open(url, "_blank");
   };
 

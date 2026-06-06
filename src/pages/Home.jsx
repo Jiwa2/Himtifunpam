@@ -10,7 +10,15 @@ export default function Home() {
           <p>Website resmi Himpunan Mahasiswa Teknik Informatika untuk informasi organisasi, program kerja, dan kegiatan mahasiswa.</p>
           <div className="hero-actions">
             <Link className="btn-primary" to="/department">Lihat Department</Link>
-            <Link className="btn-secondary" to="/struktur">Struktur Organisasi</Link>
+
+            <a 
+              className="btn-secondary" 
+              href="https://sinauin.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Belajar Fullstack IT
+            </a>
           </div>
         </div>
       </section>
