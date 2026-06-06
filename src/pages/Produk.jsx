@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SiteLayout } from "../components/SiteLayout";
-import { FaWhatsapp, FaTags, FaShoppingBag } from "react-icons/fa";
+import { FaWhatsapp, FaTags } from "react-icons/fa";
 import "./Produk.css";
 
 const dummyProducts = [
@@ -59,7 +59,7 @@ export default function Produk() {
           <div className="produk-hero-content">
             <span className="hero-tag">HIMTIF OFFICIAL STORE</span>
             <h1>Gear Up, Code in Style</h1>
-            <p>Dukung identitas organisasimu dengan koleksi merchandise eksklusif dan produk digital berkualitas tinggi buatan Himpunan Teknik Informatika.</p>
+            <p>Koleksi merchandise resmi dan produk digital HIMTIF udah ready nih! Yuk cek katalognya sekarang dan langsung amankan punya kamu!</p>
           </div>
         </div>
 

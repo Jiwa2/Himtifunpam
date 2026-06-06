@@ -72,8 +72,10 @@ function CandidateCard({ name, role }) {
   return (
     <div className="card-foto">
       <img src="/images/logohimtif.png" alt={`Foto ${role}`} loading="lazy" />
-      <strong>{name}</strong>
-      <span>{role}</span>
+      <div>
+        <strong>{name}</strong>
+        <span>{role}</span>
+      </div>
     </div>
   );
 }
