@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/produk" element={<Produk />} />
         <Route path="/pemira" element={<Pemira />} />
-        <Route path="/formpemira" element={<Formpemira />} />
+        {/* <Route path="/formpemira" element={<Formpemira />} /> */}
         <Route path="/department" element={<Department />} />
         <Route path="/kotaksaran" element={<KotakSaran />} />
         <Route path="/formpemira" element={
