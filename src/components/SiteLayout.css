@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 247, 237, 0.9);
+  background: #D3A376;
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(16px);
 }
@@ -62,8 +62,8 @@
 
 .site-nav-links a:hover,
 .site-nav-links a.active {
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
+  background: #4A3525;
+  color: #ffffff;
 }
 
 .site-menu-button {

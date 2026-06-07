@@ -32,7 +32,7 @@ export default function Department() {
       kadep: "Hubungan Masyarakat",
       desc: "Departemen Humas berperan sebagai penghubung antara HIMTIF dengan pihak luar. Humas menangani surat-menyurat, koordinasi kerja sama, serta komunikasi dengan organisasi atau pihak lain yang berkaitan dengan kegiatan HIMTIF. Departemen ini juga membantu memastikan hubungan eksternal organisasi tetap berjalan baik dan profesional",
       prokers: [
-        { id: "humas-p1", name: "Nama Proker Humas 1", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p1", name: "Audit HUMAS", tgl: "2 Maret 2026", desc: "-", status: "berjalan" },
         { id: "humas-p2", name: "Nama Proker Humas 2", tgl: "-", desc: "-", status: "-" },
         { id: "humas-p3", name: "Nama Proker Humas 3", tgl: "-", desc: "-", status: "-" },
         { id: "humas-p4", name: "Nama Proker Humas 4", tgl: "-", desc: "-", status: "-" },

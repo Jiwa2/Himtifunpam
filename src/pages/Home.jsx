@@ -76,10 +76,10 @@ export default function Home() {
 
               <h4>Arti Warna</h4>
               <ul className="warna-list">
-                <li><b style={{ color: "var(--color-primary)" }}>Biru:</b> Kepercayaan dan ketenangan, mencerminkan HIMTIF yang profesional.</li>
-                <li><b style={{ color: "#7D5A50" }}>Hijau:</b> Kebaikan dan kesehatan, menggambarkan gerakan organisasi yang positif.</li>
-                <li><b style={{ color: "#A78F79" }}>Kuning:</b> Kejayaan dan semangat menuju kemajuan.</li>
-                <li><b style={{ color: "#4B2E2A" }}>Merah:</b> Keberanian dalam berpikir dan bertindak untuk mencapai tujuan.</li>
+                <li><b style={{ color: "#1E3A8A" }}>Biru:</b> Kepercayaan dan ketenangan, mencerminkan HIMTIF yang profesional.</li>
+                <li><b style={{ color: "#16A34A" }}>Hijau:</b> Kebaikan dan kesehatan, menggambarkan gerakan organisasi yang positif.</li>
+                <li><b style={{ color: "#F59E0B" }}>Kuning:</b> Kejayaan dan semangat menuju kemajuan.</li>
+                <li><b style={{ color: "#DC2626" }}>Merah:</b> Keberanian dalam berpikir dan bertindak untuk mencapai tujuan.</li>
               </ul>
             </div>
           </div>
