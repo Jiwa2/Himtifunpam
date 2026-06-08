@@ -21,9 +21,9 @@ export default function Department() {
       kadep: "Riset Dan Teknologi",
       desc: "Departemen Ristek bertanggung jawab dalam pengembangan teknologi dan kebutuhan digital organisasi HIMTIF, termasuk pembuatan serta pengelolaan website. Selain itu, Ristek juga berperan dalam mengelola berbagai hal yang berkaitan dengan inovasi teknologi dan hal-hal yang relevan dengan program studi Teknik Informatika, agar mendukung aktivitas organisasi menjadi lebih efektif dan modern..",
       prokers: [
-        { id: "ristek-p1", name: "Collab Himtif x HMTI UMJ", tgl: "-", desc: "-", status: "(Selesai)" },
-        { id: "ristek-p2", name: "Hackaton", tgl: "13 - 18 Juni 2026", desc: "-", status: "(Akan Datang)" },
-        { id: "ristek-p3", name: "HIMFEST", tgl: "-", desc: "-", status: "(Akan Datang)" },
+        { id: "ristek-p1", name: "Collab Himtif x HMTI UMJ", tgl: "27 - 28 Aprill 2026", desc: "Kolaborasi HIMTIF dan HMTI UNJ membuat sebuah website pembelejaran menjadi fullstack yang disasarkan kepada siswa/i", status: "(Selesai)" },
+        { id: "ristek-p2", name: "Hackaton", tgl: "18 - 22 Juni 2026", desc: "Marathon code yang diselenggarakan oleh HIMTIF yang dimana akan menghasilkan project dari peserta berupa Website dan peserta dapat dilanjutkan untuk mengikuti perlombaan", status: "Selesai" },
+        { id: "ristek-p3", name: "HIMFEST", tgl: "Akan datang", desc: "-", status: "(Akan Datang)" },
       ],
     },
     {
@@ -32,11 +32,13 @@ export default function Department() {
       kadep: "Hubungan Masyarakat",
       desc: "Departemen Humas berperan sebagai penghubung antara HIMTIF dengan pihak luar. Humas menangani surat-menyurat, koordinasi kerja sama, serta komunikasi dengan organisasi atau pihak lain yang berkaitan dengan kegiatan HIMTIF. Departemen ini juga membantu memastikan hubungan eksternal organisasi tetap berjalan baik dan profesional",
       prokers: [
-        { id: "humas-p1", name: "Audit HUMAS", tgl: "2 Maret 2026", desc: "-", status: "berjalan" },
-        { id: "humas-p2", name: "Nama Proker Humas 2", tgl: "-", desc: "-", status: "-" },
-        { id: "humas-p3", name: "Nama Proker Humas 3", tgl: "-", desc: "-", status: "-" },
-        { id: "humas-p4", name: "Nama Proker Humas 4", tgl: "-", desc: "-", status: "-" },
-        { id: "humas-p5", name: "Nama Proker Humas 5", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p1", name: "Audit HUMAS", tgl: "2 Maret dan 10 April 2026", desc: "-", status: "-" },
+        { id: "humas-p2", name: "salam HIMTIF", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p3", name: "Advokasi", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p4", name: "Rudistif", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p5", name: "Chemistry Fun", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p6", name: "Pengabdian Kepada Masyarakat", tgl: "-", desc: "-", status: "-" },
+        { id: "humas-p7", name: "Kurmawa", tgl: "-", desc: "-", status: "-" },
       ],
     },
     {
