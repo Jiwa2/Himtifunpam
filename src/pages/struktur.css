@@ -1,3 +1,64 @@
+:root {
+  --color-bg: #fff7ed;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ffedd5;
+  --color-primary: #4B2E2A;
+  --color-primary-soft: #dbeafe;
+  --color-accent: #d4a373;
+  --color-accent-dark: #a76833;
+  --color-text: #1f2937;
+  --color-muted: #64748b;
+  --color-border: rgba(31, 41, 55, 0.12);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 8px 24px rgba(17, 24, 39, 0.08);
+  --shadow-lg: 0 20px 50px rgba(17, 24, 39, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.route-loader {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  font-weight: 900;
+}
+
+.page-section {
+  padding: 84px 20px;
+}
+
+.section-container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
 .struktur-wrapper {
   background: var(--color-bg);
 }
@@ -28,24 +89,27 @@
   text-transform: uppercase;
 }
 
-.bph-grid,
-.pengurus-row,
-.grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 18px;
-}
-
 .bph-grid {
   max-width: 920px;
   margin: 0 auto 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 18px;
 }
 
 .pengurus-grid {
   display: grid;
   gap: 18px;
   margin-bottom: 28px;
+}
+
+.pengurus-row,
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 18px;
 }
 
 .pengurus-row {
@@ -68,6 +132,12 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-struktur:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.12);
 }
 
 .struktur-foto {
@@ -108,8 +178,9 @@
 }
 
 @media (min-width: 900px) {
-  .bph-grid {
-    grid-template-columns: repeat(3, minmax(170px, 1fr));
+  .bph-grid .card-struktur {
+    width: calc(50% - 20px); 
+    max-width: 400px; 
   }
 }
 
@@ -119,11 +190,18 @@
     padding: 34px 0 64px;
   }
 
-  .bph-grid,
   .pengurus-row,
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .bph-grid {
+    gap: 12px;
+  }
+  
+  .bph-grid .card-struktur {
+    width: calc(50% - 12px);
   }
 
   .card-struktur {
