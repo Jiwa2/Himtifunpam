@@ -19,6 +19,7 @@ export default function Department() {
       id: "ristek",
       name: "Department RISTEK",
       kadep: "Riset Dan Teknologi",
+      img: "/public/images/ristek.png",
       desc: "Departemen Ristek bertanggung jawab dalam pengembangan teknologi dan kebutuhan digital organisasi HIMTIF, termasuk pembuatan serta pengelolaan website. Selain itu, Ristek juga berperan dalam mengelola berbagai hal yang berkaitan dengan inovasi teknologi dan hal-hal yang relevan dengan program studi Teknik Informatika, agar mendukung aktivitas organisasi menjadi lebih efektif dan modern..",
       prokers: [
         { id: "ristek-p1", name: "Collab Himtif x HMPTI UMJ", tgl: "27 - 28 Aprill 2026", desc: "Kolaborasi HIMTIF dan HMTI UNJ membuat sebuah website pembelejaran menjadi fullstack yang disasarkan kepada siswa/i", status: "(Selesai)" },
@@ -30,6 +31,7 @@ export default function Department() {
       id: "humas",
       name: "Department HUMAS",
       kadep: "Hubungan Masyarakat",
+      img: "/public/images/humas.png",
       desc: "Departemen Humas berperan sebagai penghubung antara HIMTIF dengan pihak luar. Humas menangani surat-menyurat, koordinasi kerja sama, serta komunikasi dengan organisasi atau pihak lain yang berkaitan dengan kegiatan HIMTIF. Departemen ini juga membantu memastikan hubungan eksternal organisasi tetap berjalan baik dan profesional",
       prokers: [
         { id: "humas-p1", name: "Audit HUMAS", tgl: "dua kali dalam sebulan", desc: "Evaluasi terhadap kegiatan dan strategi humas untuk menilai evektifitas komunikasi serta citra organisasi", status: "Berjalan" },
@@ -45,6 +47,7 @@ export default function Department() {
       id: "minfo",
       name: "Department MINFO",
       kadep: "Media Informasi",
+      img: "/public/images/minfo.png",
       desc: "Departemen Minfo bertugas mengelola media sosial HIMTIF, membuat desain, serta menyusun konten publikasi. Seluruh tampilan dan informasi yang dibagikan melalui media sosial HIMTIF umumnya merupakan hasil kerja departemen ini. Minfo juga berperan dalam dokumentasi kegiatan agar setiap momen penting organisasi dapat tersampaikan dengan baik.",
       prokers: [
         { id: "minfo-p1", name: "Podcast Maha Suara 10", tgl: "18 April 2026", desc: "Podcast santai yang berisi sesi sharing dan pembahasan seputar perkuliahan dan organisasi", status: "Selesai" },
@@ -58,9 +61,10 @@ export default function Department() {
       id: "sosbud",
       name: "Department SOSBUD",
       kadep: "Sosial Budaya Connect",
+      img: "/public/images/sosbud.png",
       desc: "Departemen Sosbud Connect berfokus pada kegiatan sosial dan kepedulian terhadap lingkungan sekitar. Departemen ini menangani program seperti open donasi, kegiatan sosial, dan bentuk aksi kepedulian lainnya. Sosbud Connect juga pernah terlibat dalam penjualan lanyard dan kegiatan pendukung lain yang bertujuan mempererat kebersamaan serta memberikan manfaat bagi banyak pihak.",
       prokers: [
-        { id: "sosbud-p1", name: "Buka Bersama (BUKBER)", tgl: "5 Maret 2026", desc: "Buka bersama HIMTIF yang bertujuan untuk mempererat tali silaturahmi dan menumbuhkan rasa kekeluargaan yang kuat antara seluruh anggota dan pengurus HIMTIF", status: "Selesai" },
+        { id: "sosbud-p1", name: "Buka Bersama (BUKBER)", tgl: "5 Maret 2026", desc: "Buka bersama HIMTIF yang bertujuan untuk mempererat tali silaturahmi dan menumbuhkan rasa kekeluargaan yang kuat antara seluruh anggota and pengurus HIMTIF", status: "Selesai" },
         { id: "sosbud-p2", name: "Himtif Berbagi (HIMBER)", tgl: "13 Maret 2026", desc: "Program aksi sosial kemasyarakatan yang dirancang untuk meningkatkan rasa kepedulian, empati, dan kotribusi nyata mahasiswa terhadap masyarakat atau sosial", status: "Selesai" },
         { id: "sosbud-p3", name: "Himtif Production (HIMRPO)", tgl: "Setiap hari", desc: "Penjualan merchandise HIMTIF, seperti lanyard, stiker, pernak pernik dan makanan", status: "Berjalan" },
         { id: "sosbud-p4", name: "Dana Usaha (DANUSAN)", tgl: "Setiap Event", desc: "Kegiatan pencarian dana melalui penjualan produk atau makanan di event kampus, seperti PKKMB, Seminar, DLL", status: "Berjalan" },
@@ -72,6 +76,7 @@ export default function Department() {
       id: "psdm",
       name: "Department PSDM",
       kadep: "Pengembangan Sumber Daya Manusia",
+      img: "/public/images/pdsm.png",
       desc: "Departemen PSDM bertugas mengelola dan memperhatikan perkembangan internal anggota HIMTIF. PSDM berperan dalam mengasah minat dan bakat internal HIMTIF, memantau keaktifan anggota dan pengurus, menjaga kenyamanan serta kekompakan dalam organisasi, dan menjadi tempat bagi anggota untuk menyampaikan keluh kesah atau masukan. Departemen ini berperan penting dalam menjaga hubungan internal agar tetap harmonis dan kondusif.",
       prokers: [
         { id: "psdm-p1", name: "HIMTIF Aktif belajar (AJAR)", tgl: "1 kali dalam sebulan", desc: "Program untuk mewadahi anggota sebegai pembekalan selama menjadi anggota HIMTIF, kegiatan ini dirancang untuk memberikan pemahaman kepada anggota tentang peran mereka di HIMTIF", status: "berjalan" },
@@ -97,7 +102,6 @@ export default function Department() {
           </p>
         </div>
 
-        {/* LIST DEPARTEMEN AUTOMATION (MAPPING) */}
         <div className="dept-list-wrapper">
           {departmentsData.map((dept) => {
             const isDeptOpen = !!openDept[dept.id];
@@ -114,7 +118,7 @@ export default function Department() {
                     {/* Profil Departemen */}
                     <div className="dept-profile-box">
                       <div className="dept-avatar-circle">
-                        <span>Foto</span>
+                        <img src={dept.img} alt={`Foto ${dept.name}`} onError={(e) => { e.target.style.display = 'none'; }} />
                       </div>
                       <h4 className="dept-kadep-name">{dept.kadep}</h4>
                       <p className="dept-description-text">{dept.desc}</p>
@@ -173,5 +177,3 @@ export default function Department() {
     </SiteLayout>
   );
 }
-
-
