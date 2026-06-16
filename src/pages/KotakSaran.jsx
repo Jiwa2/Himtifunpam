@@ -9,6 +9,7 @@ export default function KotakSaran() {
     email: "",
     pesan: ""
   });
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -17,10 +18,21 @@ export default function KotakSaran() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Aspirasi Anda berhasil dikirim!");
-    setFormData({ nama: "", email: "", pesan: "" });
+    setStatus("loading");
+
+    try {
+      await fetch(import.meta.env.VITE_APPS_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      setStatus("success");
+      setFormData({ nama: "", email: "", pesan: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -76,10 +88,21 @@ export default function KotakSaran() {
                 </div>
               </div>
 
-              <button type="submit" className="saran-submit-btn">
+              <button type="submit" className="saran-submit-btn" disabled={status === "loading"}>
                 <FaPaperPlane />
-                <span>Kirim Aspirasi Anda</span>
+                <span>{status === "loading" ? "Mengirim..." : "Kirim Aspirasi Anda"}</span>
               </button>
+
+              {status === "success" && (
+                <p style={{ color: "green", marginTop: "8px" }}>
+                  ✅ Aspirasi berhasil dikirim!
+                </p>
+              )}
+              {status === "error" && (
+                <p style={{ color: "red", marginTop: "8px" }}>
+                  ❌ Gagal mengirim, coba lagi.
+                </p>
+              )}
             </form>
           </div>
         </div>
