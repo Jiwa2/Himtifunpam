@@ -10,7 +10,7 @@ const dummyProducts = [
     kategori: "aksesoris",
     harga: "Rp 5.000",
     status: "Pre-Order",
-    gambar: "/images/logohimtif.png"
+    gambar: "/images/logohimtif.webp"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const dummyProducts = [
     kategori: "aksesoris",
     harga: "Rp 5.000",
     status: "Terlaris",
-    gambar: "/images/logohimtif.png"
+    gambar: "/images/logohimtif.webp"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const dummyProducts = [
     kategori: "aksesoris",
     harga: "Rp 15.000",
     status: "Tersedia",
-    gambar: "/images/logohimtif.png"
+    gambar: "/images/logohimtif.webp"
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const dummyProducts = [
     kategori: "Food and Beverage",
     harga: "Rp 10.000",
     status: "Tersedia",
-    gambar: "/images/logohimtif.png"
+    gambar: "/images/logohimtif.webp"
   },
 ];
 

@@ -66,7 +66,7 @@ export default function Formpemira() {
       <section className="formpemira-container">
         <div className="formpemira-card">
           <div className="formpemira-header">
-            <img src="/images/logohimtif.png" className="logo" alt="Logo HIMTIF" />
+            <img src="/images/logohimtif.webp" className="logo" alt="Logo HIMTIF" />
           </div>
 
           <h1 className="title">Form PEMIRA HIMTIF</h1>
@@ -127,11 +127,11 @@ function PaslonOption({ id, checked, onChange }) {
       <div className="paslon-header">Paslon {id}</div>
       <div className="paslon-form-content">
         <div className="calon">
-          <img src="/images/logohimtif.png" alt={`Ketua paslon ${id}`} className="foto" loading="lazy" />
+          <img src="/images/logohimtif.webp" alt={`Ketua paslon ${id}`} className="foto" loading="lazy" />
           <p>Ketua</p>
         </div>
         <div className="calon">
-          <img src="/images/logohimtif.png" alt={`Wakil paslon ${id}`} className="foto" loading="lazy" />
+          <img src="/images/logohimtif.webp" alt={`Wakil paslon ${id}`} className="foto" loading="lazy" />
           <p>Wakil</p>
         </div>
       </div>

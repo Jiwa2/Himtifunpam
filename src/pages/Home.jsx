@@ -67,7 +67,7 @@ export default function Home() {
 
           <div className="filosofi-content">
             <div className="filosofi-logo">
-              <img src="/images/LogoHimtifHD.png" alt="Logo HIMTIF" />
+              <img src="/images/LogoHimtifHD.webp" alt="Logo HIMTIF" />
             </div>
 
             <div className="filosofi-text">

@@ -21,7 +21,7 @@ export function SiteLayout({ children, footer = false, className = "" }) {
       <header className="site-header">
         <nav className="site-nav" aria-label="Navigasi utama">
           <Link to="/" className="site-brand" aria-label="HIMTIF UNPAM">
-            <img src="/images/LogoHimtifHD.png" alt="Logo HIMTIF" />
+            <img src="/images/LogoHimtifHD.webp" alt="Logo HIMTIF" />
             <span>HIMTIF UNPAM</span>
           </Link>
 
@@ -89,7 +89,7 @@ export function SiteFooter() {
       <div className="site-footer-inner">
         <section className="site-footer-brand">
           <div className="site-footer-logo">
-            <img src="/images/LogoHimtifHD.png" alt="Logo HIMTIF" />
+            <img src="/images/LogoHimtifHD.webp" alt="Logo HIMTIF" />
             <div>
               <h3>Himpunan Teknik Informatika</h3>
               <p>Universitas Pamulang</p>

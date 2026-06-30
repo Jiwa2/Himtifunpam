@@ -40,7 +40,7 @@ export default function KotakSaran() {
       <div className="saran-wrapper">
         <div className="saran-banner">
           <div className="saran-banner-inner">
-            <img src="/images/logohimtif.png" alt="Logo HIMTIF" className="saran-logo" />
+            <img src="/images/logohimtif.webp" alt="Logo HIMTIF" className="saran-logo" />
             <div className="saran-banner-text">
               <h1>KOTAK SARAN HIMTIF</h1>
               <div className="saran-line-dots"></div>

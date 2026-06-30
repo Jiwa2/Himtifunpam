@@ -71,7 +71,7 @@ export default function Pemira() {
 function CandidateCard({ name, role }) {
   return (
     <div className="card-foto">
-      <img src="/images/logohimtif.png" alt={`Foto ${role}`} loading="lazy" />
+      <img src="/images/logohimtif.webp" alt={`Foto ${role}`} loading="lazy" />
       <div>
         <strong>{name}</strong>
         <span>{role}</span>
