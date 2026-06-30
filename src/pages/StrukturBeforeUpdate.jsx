@@ -6,24 +6,10 @@ export default function Struktur() {
     <SiteLayout className="struktur-wrapper">
       <div className="struktur-container">
         <h1 className="judul">STRUKTUR ORGANISASI HIMTIF 2025/2026</h1>
-        
-        {/* === AREA ABOVE THE FOLD (PRIORITAS TINGGI) === */}
         <div className="bph-grid">
-          <Card 
-            nama="Saldy Saputra" 
-            jabatan="Ketua Umum" 
-            foto="/images/Saldy Saputra .webp" 
-            isPriority={true} 
-          />
-          <Card 
-            nama="Fat Khudin" 
-            jabatan="Wakil Ketua Umum" 
-            foto="/images/himtif/Fat khudin.webp" 
-            isPriority={true} 
-          />
+          <Card nama="Saldy Saputra" jabatan="Ketua Umum" foto="/images/Saldy Saputra .webp" />
+          <Card nama="Fat Khudin" jabatan="Wakil Ketua Umum" foto="/images/himtif/Fat khudin.webp" />
         </div>
-
-        {/* === AREA BELOW THE FOLD (LAZY LOAD SEMUA) === */}
         <h2 className="judul">BADAN PENGURUS HARIAN</h2>
         <div className="bph-grid">
           <Card nama="Nurlayla Fitri" jabatan="Sekretaris Umum 1" foto="/images/himtif/Nurlayla fitri.webp" />
@@ -39,7 +25,7 @@ export default function Struktur() {
           <div className="pengurus-row">
             <Card nama="Muhammad Jiwa Islamutidar" jabatan="Kepala Department Ristek" foto="/images/ristek/Muhammad Jiwa Islamutidar.webp" />
             <Card nama="Ahmad Renaldy" jabatan="Sekretaris Department" foto="/images/ristek/Ahmad Renaldy.webp" />
-            <Card nama="Abu Ziyad Al Katani" jabatan="Staff" foto="/images/ristek/Abu Ziyad Al Katani.webp" />
+                        <Card nama="Abu Ziyad Al Katani" jabatan="Staff" foto="/images/ristek/Abu Ziyad Al Katani.webp" />
             <Card nama="Mohammad Arief Ardiansyah" jabatan="Staff" foto="/images/ristek/Mohammad Arief Ardiansyah.webp" />
             <Card nama="Cintya Laura Melagro" jabatan="Staff" foto="/images/ristek/Cintya Laura Melagro.webp" />
           </div>
@@ -54,6 +40,8 @@ export default function Struktur() {
             <Card nama="Paris Nurfadhillah" jabatan="Staff" foto="/images/humas/PARIS NURFADHILLAH.webp" />
             <Card nama="Raven Firgiasyah" jabatan="Staff" foto="/images/humas/RAVEN FIRGIASYAH.webp" />
             <Card nama="Sihabudin Firmansyah" jabatan="Staff" foto="/images/humas/SIHABUDIN FIRMANSYAH.webp" />
+          </div>
+          <div className="pengurus-row">
           </div>
         </div>
 
@@ -173,21 +161,15 @@ export default function Struktur() {
   );
 }
 
-function Card({ nama, jabatan, foto, isPriority }) {
+function Card({ nama, jabatan, foto }) {
   const src = foto && !foto.endsWith("/") && !foto.endsWith("---") ? foto : "/images/logohimtif.webp";
 
   return (
     <div className="card-struktur">
-      <img 
-        src={src} 
-        alt={`Foto ${nama}`} 
-        className="struktur-foto" 
-        loading={isPriority ? "eager" : "lazy"} 
-        fetchPriority={isPriority ? "high" : "auto"} 
-        decoding={isPriority ? "sync" : "async"}
-      />
+      <img src={src} alt={`Foto ${nama}`} className="struktur-foto" loading="lazy" />
       <h4>{nama}</h4>
       <p>{jabatan}</p>
     </div>
   );
 }
+
